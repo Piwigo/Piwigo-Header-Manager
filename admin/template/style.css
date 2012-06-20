@@ -1,0 +1,16 @@
+.banner-radio {
+  display:inline-block;
+  margin:5px 0 0 20px;
+}
+.banner-radio .actions {
+  display:inline-block;
+  vertical-align:80%;
+  text-align:center;
+}
+.showInfo {
+  position:static;
+  display:inline-block;
+  padding:1px 6px;
+  width:auto;
+  font-size:0.8em;
+}

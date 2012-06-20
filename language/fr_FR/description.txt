@@ -1,0 +1,1 @@
+Header Manager permet de gérer facilement la bannière de la galerie. Vous pouvez télécharger une image depuis votre ordinateur ou utiliser une photo déjà présente sur la galerie.

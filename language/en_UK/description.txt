@@ -1,0 +1,1 @@
+Header Manager allows to simply manage gallery banners. You can upload a picture from your computer or use a picture already in the gallery.
