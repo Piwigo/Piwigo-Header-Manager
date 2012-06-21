@@ -64,8 +64,9 @@ SELECT
   else
   {
     $picture = pwg_db_fetch_assoc($result);
+    $picture['filename'] = basename($picture['path']);
     
-    copy(PHPWG_ROOT_PATH . $picture['path'], HEADER_MANAGER_DIR . $picture['file']);
+    copy(PHPWG_ROOT_PATH . $picture['path'], HEADER_MANAGER_DIR . $picture['filename']);
     
     define('IN_CROP', true);
   }
@@ -86,11 +87,13 @@ else if (isset($_POST['upload_new_image']))
   
   if (count($page['errors']) == 0)
   {
-    move_uploaded_file($file['tmp_name'], HEADER_MANAGER_DIR . $file['name']);
+    $file['filename'] = str2url(get_filename_wo_extension($file['name'])).'.'.get_extension($file['name']);
+    move_uploaded_file($file['tmp_name'], HEADER_MANAGER_DIR . $file['filename']);
     
-    list($width, $height) = getimagesize(HEADER_MANAGER_DIR . $file['name']);
+    list($width, $height) = getimagesize(HEADER_MANAGER_DIR . $file['filename']);
     $picture = array(
       'file' => $file['name'],
+      'filename' => $file['filename'],
       'width' => $width,
       'height' => $height,
       );
@@ -107,7 +110,7 @@ if (defined('IN_CROP'))
   $conf['header_manager']['height'] = intval($_POST['height']);
   conf_update_param('header_manager', serialize($conf['header_manager']));
     
-  $picture['banner_src'] = HEADER_MANAGER_DIR . $picture['file'];
+  $picture['banner_src'] = HEADER_MANAGER_DIR . $picture['filename'];
   
   $template->assign(array(
     'IN_CROP' => true,

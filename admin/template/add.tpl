@@ -53,7 +53,7 @@ function jOnRelease() {ldelim}
   <input type="hidden" name="y">
   <input type="hidden" name="x2">
   <input type="hidden" name="y2">
-  <input type="hidden" name="picture_file" value="{$picture.file}">
+  <input type="hidden" name="picture_file" value="{$picture.filename}">
   
   <input type="submit" name="submit_crop" value="{'Submit'|@translate}">
   <input type="submit" name="cancel_crop" value="{'Cancel'|@translate}">
