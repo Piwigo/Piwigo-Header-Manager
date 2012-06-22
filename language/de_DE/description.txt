@@ -1,0 +1,1 @@
+Der Kopf-Manager erlaubt die einfache Einstellung des Galerie Banners. Sie können ein Bild von Ihrem Computer hochladen, oder eins aus der Galerie nehmen.
