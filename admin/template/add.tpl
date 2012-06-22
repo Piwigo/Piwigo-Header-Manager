@@ -1,6 +1,6 @@
 {combine_css path=$HEADER_MANAGER_PATH|@cat:"admin/template/style.css"}
 
-<div class="titrePage" style="float:right;margin-top:-2em;">
+<div class="titrePage">
 	<h2>Header Manager</h2>
 </div>
 

@@ -7,7 +7,7 @@ jQuery("input[name='display']").change(function() {
 });
 {/literal}{/footer_script}
 
-<div class="titrePage" style="float:right;margin-top:-2em;">
+<div class="titrePage">
 	<h2>Header Manager</h2>
 </div>
 

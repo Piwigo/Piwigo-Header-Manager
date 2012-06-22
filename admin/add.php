@@ -87,7 +87,7 @@ else if (isset($_POST['upload_new_image']))
   
   if (count($page['errors']) == 0)
   {
-    $file['filename'] = str2url(get_filename_wo_extension($file['name'])).'.'.get_extension($file['name']);
+    $file['filename'] = date('Ymd').'-'.uniqid().'.'.get_extension($file['name']);
     move_uploaded_file($file['tmp_name'], HEADER_MANAGER_DIR . $file['filename']);
     
     list($width, $height) = getimagesize(HEADER_MANAGER_DIR . $file['filename']);
