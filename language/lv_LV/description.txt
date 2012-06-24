@@ -1,0 +1,1 @@
+Galveņu pārvaldnieks dod iespēju vienkārši pārvaldīt galerijas banerus. Jūs varat augšupielādēt attēlu no sava datora vai izmantot jau galerijā esošu attēlu.
