@@ -1,0 +1,1 @@
+Správca hlavičky umožňujúci jednoducho spravovať banery galérií. Môžete nahrať fotku z Vášho počítača alebo použiť fotku vo Vašej galérii.
