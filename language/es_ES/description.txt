@@ -1,0 +1,1 @@
+El administrador de cabeceras permite gestionar fácilmente las cabeceras de la galería. Puedes subir una imagen desde su ordenador o utilizar una imagen que ya está en la galería
