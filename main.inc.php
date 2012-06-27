@@ -18,6 +18,8 @@ add_event_handler('init', 'header_manager_init');
 
 function header_manager_init()
 {
+  if (defined('PWG_HELP')) return;
+  
   global $conf;
   $conf['header_manager'] = unserialize($conf['header_manager']);
     
