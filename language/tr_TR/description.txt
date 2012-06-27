@@ -1,0 +1,2 @@
+Başlık Yöneticisi (Header Manager), galeri afişlerini yönetmenize imkan tanır.
+Bilgisayarınızdan bir resim yükleyebilir veya hali hazırda galeride bulunan bir resmi kullanabilirsiniz.
