@@ -1,0 +1,1 @@
+Gerenciador do cabeçalho permite apenas gerenciar bandeiras da galeria. Você pode carregar uma imagem do seu computador ou usar uma imagem já na galeria.
