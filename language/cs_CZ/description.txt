@@ -1,0 +1,1 @@
+Header Manager umožňuje jednoduše spravovat bannery galerie. Můžete nahrát obrázek z vašeho počítače, nebo použít nějaký z galerie.
