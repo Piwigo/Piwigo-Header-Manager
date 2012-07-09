@@ -1,0 +1,1 @@
+Header Manager pozwala na proste zarządzanie banerami galerii. Możesz załadować zdjęcie z komputera lub użyć któreś ze swojej galerii.
