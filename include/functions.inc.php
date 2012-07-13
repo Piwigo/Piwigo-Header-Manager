@@ -6,7 +6,8 @@ if (!defined('HEADER_MANAGER_PATH')) die('Hacking attempt!');
  * @param: bool delete_orphans (from unachieved cropping process)
  */
 function list_banners($delete_orphans=false)
-{
+{ 
+  if (!file_exists(HEADER_MANAGER_DIR)) return array();
   $dir = scandir(HEADER_MANAGER_DIR);
   $banners = array();
   
