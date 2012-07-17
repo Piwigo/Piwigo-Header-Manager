@@ -1,0 +1,1 @@
+A Header Manager segítségével egyszerűen testre szabhatja a fejlécet. Feltölthet képet a számítógépről, vagy használhatja a galéria képeit.
