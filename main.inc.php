@@ -10,9 +10,11 @@ Author URI: http://www.strangeplanet.fr
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
+global $prefixeTable;
 define('HEADER_MANAGER_PATH', PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)) . '/');
 define('HEADER_MANAGER_ADMIN', get_root_url() . 'admin.php?page=plugin-' . basename(dirname(__FILE__)));
 define('HEADER_MANAGER_DIR', PWG_LOCAL_DIR . 'banners/');
+define('HEADER_MANAGER_TABLE', $prefixeTable . 'category_banner');
 
 add_event_handler('init', 'header_manager_init');
 
@@ -30,6 +32,7 @@ function header_manager_init()
 
   if (defined('IN_ADMIN'))
   {
+    add_event_handler('tabsheet_before_select', 'header_manager_tab', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
     add_event_handler('get_admin_plugin_menu_links', 'header_manager_admin_menu');
   }
 }

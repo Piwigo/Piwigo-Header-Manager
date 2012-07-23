@@ -30,4 +30,6 @@ $lang['Random'] = 'Random';
 $lang['No banner added yet'] = 'No banner added yet';
 $lang['Add a banner'] = 'Add a banner';
 
+$lang['Default banner'] = 'Default banner';
+
 ?>

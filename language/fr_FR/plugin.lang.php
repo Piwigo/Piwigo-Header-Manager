@@ -30,4 +30,6 @@ $lang['Random'] = 'Aléatoire';
 $lang['No banner added yet'] = 'Aucune bannière ajoutée';
 $lang['Add a banner'] = 'Ajouter une bannière';
 
+$lang['Default banner'] = 'Bannière par défaut';
+
 ?>

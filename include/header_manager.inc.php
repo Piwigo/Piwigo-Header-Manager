@@ -6,18 +6,59 @@ if (!defined('HEADER_MANAGER_PATH')) die('Hacking attempt!');
  */
 function header_manager_render($page_banner)
 {
-  global $conf, $user, $template;
+  global $conf, $user, $template, $page;
   
-  if ($conf['header_manager']['image'] == 'random')
+  // search banner for a specific category
+  if (isset($page['category']))
   {
-    $banners = list_banners();
-    if (!count($banners)) return $page_banner;
-    $banner = $banners[ mt_rand(0, count($banners)-1) ];
+    // we use the banner configured for this category
+    // if no banner is configured we use the banner of the first parent category with a "deep" banner
+    // if nothing found we use the default banner
+    $query = '
+SELECT *
+  FROM '.HEADER_MANAGER_TABLE.'
+  WHERE
+    category_id IN ('.$page['category']['uppercats'].')
+    AND (category_id = '.$page['category']['id'].' OR deep = 1)
+;';
+    $cat_banners = hash_from_query($query, 'category_id');
+    
+    if (count($cat_banners))
+    {
+      function uppercats_sort($a, $b)
+      {
+        global $page;
+        $ids = explode(',', $page['category']['uppercats']);
+        return array_search($a['category_id'], $ids) < array_search($b['category_id'], $ids);
+      }
+      usort($cat_banners, 'uppercats_sort');
+      
+      foreach ($cat_banners as $cat_banner)
+      {
+        $cat_banner = get_banner($cat_banner['image']);
+        if ($cat_banner !== false)
+        {
+          $banner = $cat_banner;
+          break;
+        }
+      }
+    }
   }
-  else
+  
+  // use default banner
+  if (!isset($banner))
   {
-    $banner = get_banner($conf['header_manager']['image']);
-    if (!file_exists($banner['PATH'])) return $page_banner;
+    if ($conf['header_manager']['image'] == 'random')
+    {
+      $banners = list_banners();
+      if (!count($banners)) return $page_banner;
+      $banner = $banners[ mt_rand(0, count($banners)-1) ];
+    }
+    else
+    {
+      $banner = get_banner($conf['header_manager']['image']);
+      if ($banner === false) return $page_banner;
+    }
   }
   
   // for MontBlancXL and BlancMontXL the banner is displayed as background of the header
@@ -72,6 +113,24 @@ function header_manager_admin_menu($menu)
     'URL' => HEADER_MANAGER_ADMIN,
   ));
   return $menu;
+}
+
+/**
+ * tab on album edition page
+ */
+function header_manager_tab($sheets, $id)
+{
+  if ($id == 'album')
+  {
+    load_language('plugin.lang', HEADER_MANAGER_PATH);
+    
+    $sheets['headermanager'] = array(
+      'caption' => l10n('Banner'),
+      'url' => HEADER_MANAGER_ADMIN.'-album&amp;cat_id='.$_GET['cat_id'],
+      );
+  }
+  
+  return $sheets;
 }
 
 ?>
