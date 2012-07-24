@@ -8,6 +8,8 @@ function header_manager_render($page_banner)
 {
   global $conf, $user, $template, $page;
   
+  if (defined('IN_ADMIN')) return $page_banner;
+  
   // search banner for a specific category
   if (isset($page['category']))
   {
