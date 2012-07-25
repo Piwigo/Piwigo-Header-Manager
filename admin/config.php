@@ -39,6 +39,12 @@ if (isset($_GET['delete_banner']))
       conf_update_param('header_manager', serialize($conf['header_manager']));
     }
     
+    $query = '
+DELETE FROM '.HEADER_MANAGER_TABLE.'
+  WHERE image = "'.$_GET['delete_banner'].'"
+;';
+    pwg_query($query);
+    
     array_push($page['infos'], l10n('Banner deleted'));
   }
   else

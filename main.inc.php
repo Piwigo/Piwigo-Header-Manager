@@ -34,6 +34,7 @@ function header_manager_init()
   {
     add_event_handler('tabsheet_before_select', 'header_manager_tab', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
     add_event_handler('get_admin_plugin_menu_links', 'header_manager_admin_menu');
+    add_event_handler('delete_categories', 'header_manager_delete_categories');
   }
 }
 

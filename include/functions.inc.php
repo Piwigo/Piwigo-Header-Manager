@@ -111,4 +111,16 @@ function get_crop_display($picture)
   return $crop;
 }
 
+/**
+ * clean table when categroies are delete
+ */
+function header_manager_delete_categories($ids)
+{
+  $query = '
+DELETE FROM '.HEADER_MANAGER_TABLE.'
+  WHERE category_id IN('.implode(',', $ids).')
+;';
+  pwg_query($query);
+}
+
 ?>

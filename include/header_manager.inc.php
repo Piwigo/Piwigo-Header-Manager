@@ -86,7 +86,7 @@ SELECT *
   {
     $template->append('head_elements',
 '<style type="text/css">
-#theHeader div.banner { background:transparent url(\''.$banner['PATH'].'\') center center no-repeat;height:'.$banner['SIZE'][1].'px;line-height:'.($banner['SIZE'][1]-12).'px;font-size:2.5em;color:#fff;text-shadow:0 0 5px #000; }
+#theHeader div.banner { background:transparent url(\''.$banner['PATH'].'\') center center no-repeat;height:'.$banner['SIZE'][1].'px;line-height:'.($banner['SIZE'][1]-12).'px;font-size:2.5em;color:#fff;text-shadow:0 0 5px #000;text-align:center; }
 </style>'
       );
     
