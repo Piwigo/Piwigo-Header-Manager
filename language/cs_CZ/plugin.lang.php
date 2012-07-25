@@ -44,4 +44,5 @@ $lang['With text'] = 'S textem';
 $lang['You can customize the display by adding CSS rules to'] = 'Můžete přizpůsobit zobrazování přidáním CSS pravidel';
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Můžete nahrát obrázek banneru z vašeho počítače, nebo použít nějaký z galerie. V dalším okně budete moct obrázek oříznout.';
 $lang['or choose a picture from the gallery'] = 'nebo vyberte obrázek z galerie';
+$lang['Default banner'] = 'Výchozí banner';
 ?>
