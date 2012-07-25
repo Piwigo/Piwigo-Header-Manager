@@ -44,4 +44,5 @@ $lang['Random'] = 'Véletlen';
 $lang['Unknown picture id'] = 'Ismeretlen kép ID';
 $lang['With text'] = 'Csak szöveg';
 $lang['You can customize the display by adding CSS rules to'] = 'A megjelenítés testreszabható a CSS szabályok megadásával';
+$lang['Default banner'] = 'Alapértelmezett banner';
 ?>
