@@ -44,4 +44,5 @@ $lang['With text'] = 'Met tekst';
 $lang['You can customize the display by adding CSS rules to'] = 'Je kunt het venster aanpassen door CSS-regels toe te voegen aan ';
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Je kunt een aangepaste banierafbeelding inlezen of er een kiezen uit je galerij. In het volgende scherm kun je de afbeelding bijsnijden.';
 $lang['or choose a picture from the gallery'] = 'of kies een afbeelding uit de galerij';
+$lang['Default banner'] = 'standaardbanier';
 ?>
