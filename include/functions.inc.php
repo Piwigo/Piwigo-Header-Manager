@@ -39,8 +39,8 @@ function get_banner($file)
   {
     return array(
       'NAME' => $file,
-      'PATH' => HEADER_MANAGER_DIR . $file,
-      'THUMB' => HEADER_MANAGER_DIR . get_filename_wo_extension($file) . '-thumbnail.'. get_extension($file),
+      'PATH' => get_root_url().HEADER_MANAGER_DIR . $file,
+      'THUMB' => get_root_url().HEADER_MANAGER_DIR . get_filename_wo_extension($file) . '-thumbnail.'. get_extension($file),
       'SIZE' => getimagesize(HEADER_MANAGER_DIR . $file),
       );
   }
