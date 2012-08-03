@@ -1,0 +1,1 @@
+Header Manager muliggjør å bytte galleriets logo. Du kan laste opp et bilde fra din datamaskin, eller bruke et du allerede har i galleriet.
