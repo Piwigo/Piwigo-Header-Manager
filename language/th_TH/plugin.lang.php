@@ -25,4 +25,17 @@ $lang['Banner'] = 'ป้าย';
 $lang['Image only'] = 'รูปภาพเท่านั้น';
 $lang['Random'] = 'สุ่ม';
 $lang['Select an image'] = 'เลือกรูปภาพ';
+$lang['Choose an image from your computer'] = 'เลือกอัพโหลดรูปภาพจากคอมพิวเตอร์';
+$lang['Gallery title above image'] = 'ชื่อแกลอรี่อยู่ใต้รูปภาพ';
+$lang['Default banner'] = 'ป้ายรูปภาพปกติ';
+$lang['Crop banner image'] = 'ตัดป้ายรูปภาพ';
+$lang['Default banner size'] = 'ขนาดป้ายปกติ';
+$lang['Unknown picture id'] = 'ไม่ทราบไอดีรูปภาพ';
+$lang['Incorrect file type,'] = 'รูปแบบไฟล์ไม่ถูกต้อง';
+$lang['or choose a picture from the gallery'] = 'หรือเลือกรูปภาพจากแกลอรี่';
+$lang['Banner added'] = 'เพิ่มป้ายรูปภาพ';
+$lang['Banner deleted'] = 'ลบป้ายรูปภาพ';
+$lang['Picture id.'] = 'ไอดีรูปภาพ';
+$lang['Use'] = 'ใช้';
+$lang['With text'] = 'ด้วยข้อความ';
 ?>
