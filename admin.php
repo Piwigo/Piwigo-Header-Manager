@@ -4,29 +4,18 @@ if (!defined('HEADER_MANAGER_PATH')) die('Hacking attempt!');
 global $template, $page;
 load_language('plugin.lang', HEADER_MANAGER_PATH);
 
-if (!file_exists(HEADER_MANAGER_DIR)) 
-{
-  mkdir(HEADER_MANAGER_DIR, 0755);
-}
-
 $page['tab'] = (isset($_GET['tab'])) ? $_GET['tab'] : 'config';
 
-if ($page['tab'] == 'album')
-{
-  include(HEADER_MANAGER_PATH . 'admin/album.php');
-}
-else
+if ($page['tab'] != 'album')
 {
   // tabsheet
   include_once(PHPWG_ROOT_PATH.'admin/include/tabsheet.class.php');    
   $tabsheet = new tabsheet();
+  $tabsheet->set_id('header_manager');
   $tabsheet->add('config', l10n('Configuration'), HEADER_MANAGER_ADMIN . '-config');
   $tabsheet->add('add', l10n('Add a banner'), HEADER_MANAGER_ADMIN . '-add');
   $tabsheet->select($page['tab']);
   $tabsheet->assign();
-
-  // include page
-  include(HEADER_MANAGER_PATH . 'admin/' . $page['tab'] . '.php');
 
   // template
   $template->assign(array(
@@ -34,6 +23,9 @@ else
     'ADD_IMAGE_URL' => HEADER_MANAGER_ADMIN . '-add',
     ));
 }
+
+// include page
+include(HEADER_MANAGER_PATH . 'admin/' . $page['tab'] . '.php');
 
 $template->assign('HEADER_MANAGER_PATH', HEADER_MANAGER_PATH);
 

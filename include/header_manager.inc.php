@@ -8,8 +8,6 @@ function header_manager_render($page_banner)
 {
   global $conf, $user, $template, $page;
   
-  if (defined('IN_ADMIN')) return $page_banner;
-  
   // search banner for a specific category
   if (isset($page['category']))
   {
@@ -27,13 +25,7 @@ SELECT *
     
     if (count($cat_banners))
     {
-      function uppercats_sort($a, $b)
-      {
-        global $page;
-        $ids = explode(',', $page['category']['uppercats']);
-        return array_search($a['category_id'], $ids) < array_search($b['category_id'], $ids);
-      }
-      usort($cat_banners, 'uppercats_sort');
+      usort($cat_banners, 'hm_uppercats_sort');
       
       foreach ($cat_banners as $cat_banner)
       {
@@ -105,34 +97,11 @@ SELECT *
   return $page_banner;
 }
 
-/**
- * Header Manager admin link
- */
-function header_manager_admin_menu($menu) 
+function hm_uppercats_sort($a, $b)
 {
-  array_push($menu, array(
-    'NAME' => 'Header Manager',
-    'URL' => HEADER_MANAGER_ADMIN,
-  ));
-  return $menu;
-}
-
-/**
- * tab on album edition page
- */
-function header_manager_tab($sheets, $id)
-{
-  if ($id == 'album')
-  {
-    load_language('plugin.lang', HEADER_MANAGER_PATH);
-    
-    $sheets['headermanager'] = array(
-      'caption' => l10n('Banner'),
-      'url' => HEADER_MANAGER_ADMIN.'-album&amp;cat_id='.$_GET['cat_id'],
-      );
-  }
-  
-  return $sheets;
+  global $page;
+  $ids = explode(',', $page['category']['uppercats']);
+  return array_search($a['category_id'], $ids) < array_search($b['category_id'], $ids);
 }
 
 ?>

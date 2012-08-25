@@ -35,16 +35,18 @@ jQuery("input[name='display']").change(function() {
     
   {if $banners}
     <div class="banner-radio" style="display:block;">
-      <input type="radio" name="image" value="random" id="banner-random"{if $BANNER_IMAGE=='random'}checked="checked"{/if}>
+      <input type="radio" name="image" value="random" id="banner-random" {if $BANNER_IMAGE=='random'}checked="checked"{/if}>
       <label for="banner-random"><b>{'Random'|@translate}</b></label>
     </div>
     {foreach from=$banners item=image}
     <div class="banner-radio">
       <span class="actions">
         <input type="radio" name="image" value="{$image.NAME}" id="banner-{$image.NAME}" {if $BANNER_IMAGE==$image.NAME}checked="checked"{/if}><br>
-        <a href="{$CONFIG_URL}&amp;delete_banner={$image.NAME}" class="removeFilter" title="{'Delete'|@translate}" onclick="return confirm('{'Are you sure?'|@translate|@escape:javascript}');"><span>[x]</span></a>
       </span>
-      <label for="banner-{$image.NAME}"><img src="{$image.THUMB}" alt="{$image.NAME}"></label> 
+      <span class="banner-wrapper">
+        <a href="{$CONFIG_URL}&amp;delete_banner={$image.NAME}" title="{'Delete'|@translate}" onclick="return confirm('{'Are you sure?'|@translate|@escape:javascript}');" class="delete-banner">&times;</a>
+        <label for="banner-{$image.NAME}"><img src="{$image.THUMB}" alt="{$image.NAME}"></label>
+      </span>
     </div>
     {/foreach}
   {else}

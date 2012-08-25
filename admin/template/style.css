@@ -2,11 +2,40 @@
   display:inline-block;
   margin:5px 0 0 20px;
 }
-.banner-radio .actions {
-  display:inline-block;
-  vertical-align:80%;
-  text-align:center;
-}
+  .banner-radio .actions {
+    display:inline-block;
+    padding-top:30px;
+    vertical-align:top;
+  }
+  .banner-wrapper {
+    display:inline-block;
+    position:relative;
+    width:230px;
+    height:70px;
+  }
+    .delete-banner {
+      position:absolute;
+      display:block;
+      top:0;
+      right:0;
+      margin:0;
+      width:16px;
+      height:16px;
+      background:rgba(20,20,20,0.5);
+      color:#eee;
+      border:1px solid #999;
+      border-top:none;
+      border-right:none;
+      border-radius:0 0 0 4px;
+      font-weight:bold;
+      text-align:center;
+    }
+      .delete-banner:hover {
+        color:#e00 !important;
+        border-color:#e00;
+        background:rgba(20,20,20,1);
+      }
+
 .showInfo {
   position:static;
   display:inline-block;
