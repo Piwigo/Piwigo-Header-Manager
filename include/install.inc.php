@@ -20,7 +20,7 @@ function header_manager_install()
   }
 
   // banners directory
-  if (!file_exists(PWG_LOCAL_DIR . 'banners/')) 
+  if ( file_exists(PWG_LOCAL_DIR) and !file_exists(PWG_LOCAL_DIR . 'banners/') ) 
   {
     mkdir(PWG_LOCAL_DIR . 'banners/', 0755);
   }
