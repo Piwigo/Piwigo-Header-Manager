@@ -17,29 +17,57 @@ define('HEADER_MANAGER_DIR',     PWG_LOCAL_DIR . 'banners/');
 define('HEADER_MANAGER_TABLE',   $prefixeTable . 'category_banner');
 define('HEADER_MANAGER_VERSION', '1.0.3');
 
-add_event_handler('init', 'header_manager_init');
 
+add_event_handler('init', 'header_manager_init');
+  
+if (defined('IN_ADMIN'))
+{
+  add_event_handler('get_admin_plugin_menu_links', 'header_manager_admin_menu');
+  add_event_handler('tabsheet_before_select', 'header_manager_tab', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
+  add_event_handler('delete_categories', 'header_manager_delete_categories');
+}
+else if (!defined('PWG_HELP'))
+{
+  add_event_handler('render_page_banner', 'header_manager_render');
+}
+
+include_once(HEADER_MANAGER_PATH . 'include/functions.inc.php');
+include_once(HEADER_MANAGER_PATH . 'include/header_manager.inc.php');
+
+
+/**
+ * update plugin & unserialize conf
+ */
 function header_manager_init()
 {
-  if (defined('PWG_HELP')) return;
+  global $conf, $pwg_loaded_plugins, $page;
   
-  global $conf;
-  $conf['header_manager'] = unserialize($conf['header_manager']);
+  if (
+    $pwg_loaded_plugins['header_manager']['version'] == 'auto' or
+    version_compare($pwg_loaded_plugins['header_manager']['version'], HEADER_MANAGER_VERSION, '<')
+  )
+  {
+    include_once(HEADER_MANAGER_PATH . 'maintain.inc.php');
+    plugin_install();
     
-  include_once(HEADER_MANAGER_PATH . 'include/functions.inc.php');
-  include_once(HEADER_MANAGER_PATH . 'include/header_manager.inc.php');
+    if ($pwg_loaded_plugins['header_manager']['version'] != 'auto')
+    {
+      $query = '
+UPDATE '. PLUGINS_TABLE .'
+SET version = "'. HEADER_MANAGER_VERSION .'"
+WHERE id = "header_manager"';
+      pwg_query($query);
+      
+      $pwg_loaded_plugins['header_manager']['version'] = HEADER_MANAGER_VERSION;
+      
+      if (defined('IN_ADMIN'))
+      {
+        $_SESSION['page_infos'][] = 'Header Manager updated to version '. HEADER_MANAGER_VERSION;
+      }
+    }
+  }
   
-  if (!defined('IN_ADMIN'))
-  {
-    add_event_handler('render_page_banner', 'header_manager_render');
-  }
-  else
-  {
-    add_event_handler('loc_begin_admin_page', 'header_manager_check_version');
-    add_event_handler('get_admin_plugin_menu_links', 'header_manager_admin_menu');
-    add_event_handler('tabsheet_before_select', 'header_manager_tab', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
-    add_event_handler('delete_categories', 'header_manager_delete_categories');
-  }
+  $conf['header_manager'] = unserialize($conf['header_manager']);
 }
 
 /**
@@ -70,39 +98,6 @@ function header_manager_tab($sheets, $id)
   }
   
   return $sheets;
-}
-
-/**
- * updating the plugin
- */
-function header_manager_check_version()
-{
-  global $pwg_loaded_plugins, $page;
-  
-  if (
-    ( 
-      @$page['page'] == 'intro' or 
-      @$_GET['section'] == 'header_manager/admin.php' 
-    )
-    and 
-    (
-      $pwg_loaded_plugins['header_manager']['version'] == 'auto' or
-      version_compare($pwg_loaded_plugins['header_manager']['version'], HEADER_MANAGER_VERSION, '<')
-    ) 
-  )
-  {
-    include_once(HEADER_MANAGER_PATH . 'include/install.inc.php');
-    header_manager_install();
-    
-    if ($pwg_loaded_plugins['header_manager']['version'] != 'auto')
-    {
-      $query = '
-UPDATE '. PLUGINS_TABLE .'
-SET version = "'. HEADER_MANAGER_VERSION .'"
-WHERE id = "header_manager"';
-      pwg_query($query);
-    }
-  }
 }
 
 ?>
