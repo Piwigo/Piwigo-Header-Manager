@@ -47,8 +47,8 @@ function header_manager_init()
     version_compare($pwg_loaded_plugins['header_manager']['version'], HEADER_MANAGER_VERSION, '<')
   )
   {
-    include_once(HEADER_MANAGER_PATH . 'maintain.inc.php');
-    plugin_install();
+    include_once(HEADER_MANAGER_PATH . 'include/install.inc.php');
+    header_manager_install();
     
     if ($pwg_loaded_plugins['header_manager']['version'] != 'auto')
     {
