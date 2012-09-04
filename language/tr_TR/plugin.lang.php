@@ -45,4 +45,5 @@ $lang['You can customize the display by adding CSS rules to'] = 'CSS kuralları 
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Bilgisayarınızdan kişisel başlık resmi yükleyebilir veya galeriden bir resmi seçebilirsiniz. Sonraki ekranda resme kırpma işlemi yapabilirsiniz.';
 $lang['or choose a picture from the gallery'] = 'yada galeriden bir resim seçin';
 $lang['Default banner'] = 'Varsayılan afiş (banner)';
+$lang['Display banner on photo page'] = 'Fotoğraf sayfasında banner görüntüle';
 ?>
