@@ -8,6 +8,11 @@ function header_manager_render($page_banner)
 {
   global $conf, $user, $template, $page;
   
+  if ( script_basename() == 'picture' and !$conf['header_manager']['banner_on_picture'] )
+  {
+    return null;
+  }
+  
   // search banner for a specific category
   if (isset($page['category']))
   {

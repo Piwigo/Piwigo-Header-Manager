@@ -14,12 +14,17 @@ if (isset($_POST['save_config']))
 {
   if ($_POST['display'] == 'with_text')
   {
-    conf_update_param('page_banner', $_POST['conf_page_banner']);
     $conf['page_banner'] = $_POST['conf_page_banner'];
+    conf_update_param('page_banner', $conf['page_banner']);
   }
   
-  $conf['header_manager']['image'] = $_POST['image'];
-  $conf['header_manager']['display'] = $_POST['display'];
+  $conf['header_manager'] = array(
+    'width' => $conf['header_manager']['width'],
+    'height' => $conf['header_manager']['height'],
+    'image' => $_POST['image'],
+    'display' => $_POST['display'],
+    'banner_on_picture' => isset($_POST['banner_on_picture']),
+    );
   conf_update_param('header_manager', serialize($conf['header_manager']));
   
   array_push($page['infos'], l10n('Information data registered in database'));
@@ -64,6 +69,7 @@ $template->assign(array(
   'CONF_PAGE_BANNER' => htmlspecialchars($conf['page_banner']),
   'BANNER_IMAGE' => $conf['header_manager']['image'],
   'BANNER_DISPLAY' => $conf['header_manager']['display'],
+  'BANNER_ON_PICTURE' => $conf['header_manager']['banner_on_picture']
   ));
 
 $template->set_filename('header_manager', dirname(__FILE__).'/template/config.tpl');

@@ -29,6 +29,7 @@ $lang['Banner'] = 'Bannière';
 $lang['Random'] = 'Aléatoire';
 $lang['No banner added yet'] = 'Aucune bannière ajoutée';
 $lang['Add a banner'] = 'Ajouter une bannière';
+$lang['Display banner on photo page'] = 'Afficher la bannière sur la page des photos';
 
 $lang['Default banner'] = 'Bannière par défaut';
 

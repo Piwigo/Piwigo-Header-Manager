@@ -12,11 +12,22 @@ function header_manager_install()
       'width' => 1000,
       'height' => 150,
       'image' => 'random',
-      'display' => 'image_only'
+      'display' => 'image_only',
+      'banner_on_picture' => true,
       ));
     
     conf_update_param('header_manager', $header_manager_default_config);
     $conf['header_manager'] = $header_manager_default_config;
+  }
+  else
+  {
+    $new_conf = unserialize($conf['header_manager']);
+    if (!isset($new_conf['banner_on_picture']))
+    {
+      $new_conf['banner_on_picture'] = true;
+      $conf['header_manager'] = serialize($new_conf);
+      conf_update_param('header_manager', $conf['header_manager']);
+    }
   }
 
   // banners directory

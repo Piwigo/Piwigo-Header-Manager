@@ -28,6 +28,8 @@ jQuery("input[name='display']").change(function() {
       <textarea rows="5" cols="50" class="description" name="conf_page_banner">{$CONF_PAGE_BANNER}</textarea><br>
       <i>{'Put <b>%header_manager%</b> where you want to display the image.'|@translate}</i>
     </div>
+    
+    <label><input style="margin-top:20px;" type="checkbox" name="banner_on_picture" value="true" {if $BANNER_ON_PICTURE}checked="checked"{/if}> <b>{'Display banner on photo page'|@translate}</b></label>
   </fieldset>
   
   <fieldset id="batchManagerGlobal">

@@ -29,6 +29,7 @@ $lang['Banner'] = 'Banner';
 $lang['Random'] = 'Random';
 $lang['No banner added yet'] = 'No banner added yet';
 $lang['Add a banner'] = 'Add a banner';
+$lang['Display banner on photo page'] = 'Display banner on photo page';
 
 $lang['Default banner'] = 'Default banner';
 
