@@ -45,4 +45,5 @@ $lang['You can customize the display by adding CSS rules to'] = 'Μπορείτ�
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Μπορείτε να φορτώσετε μια προσαρμοσμένη κεφαλίδα εικόνας ή επιλέξτε μία από τις γκαλερί σας. Στην επόμενη οθόνη, θα είστε σε θέση να περικόψετε την εικόνα.';
 $lang['or choose a picture from the gallery'] = 'ή επιλέξτε μια εικόνα από τη συλλογή';
 $lang['Default banner'] = 'Προεπιλεγμένο μπάνερ';
+$lang['Display banner on photo page'] = 'Προβολή του banner στη σελίδα φωτογραφίας';
 ?>
