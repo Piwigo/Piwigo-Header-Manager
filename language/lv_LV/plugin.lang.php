@@ -45,4 +45,5 @@ $lang['You can customize the display by adding CSS rules to'] = 'Jūs varat pers
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Jūs varat augšupielādēt savu pielāgotu galvenes attēlu vai izvēlēties kādu gatavu no galerijas. Nākamajā logā būs iespējams attēlu apgriezt.';
 $lang['or choose a picture from the gallery'] = 'vai izvēlaties attēlu no galerijas';
 $lang['Default banner'] = 'Baneris pēc noklusējuma';
+$lang['Display banner on photo page'] = 'Rādīt baneri uz foto lapas';
 ?>
