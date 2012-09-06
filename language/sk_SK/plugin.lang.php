@@ -45,4 +45,5 @@ $lang['You can customize the display by adding CSS rules to'] = 'Môžete prisp�
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Môžete nahrať čiastočnú hlavičku fotky, alebo označiť jednu vo Vašej galérii. Na ďalšej obrazovke budete môcť urobiť výrez z fotky.';
 $lang['or choose a picture from the gallery'] = 'alebo vybrať fotku z galérie';
 $lang['Default banner'] = 'Predvolený baner';
+$lang['Display banner on photo page'] = 'Zobraziť banner na stánke fotiek';
 ?>
