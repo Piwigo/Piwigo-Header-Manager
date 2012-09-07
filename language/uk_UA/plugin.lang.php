@@ -45,4 +45,5 @@ $lang['With text'] = 'З текстом';
 $lang['You can customize the display by adding CSS rules to'] = 'Ви можете налаштувати відображення за допомогою стилів CSS';
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Ви можете завантажити зображення користувача або вибрати картинку з галереї. На наступній сторінці Ви зможете обрізати вибране зображення.';
 $lang['or choose a picture from the gallery'] = 'або обрати зображення з галереї';
+$lang['Display banner on photo page'] = 'Відображення банера на сторінці зображень';
 ?>
