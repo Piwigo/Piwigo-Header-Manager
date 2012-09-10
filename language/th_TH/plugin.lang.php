@@ -38,4 +38,12 @@ $lang['Banner deleted'] = 'ลบป้ายรูปภาพ';
 $lang['Picture id.'] = 'ไอดีรูปภาพ';
 $lang['Use'] = 'ใช้';
 $lang['With text'] = 'ด้วยข้อความ';
+$lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'คุณสามารถอัปโหลดภาพส่วนหัวที่กำหนดเอง หรือเลือกภาพจากแกลเลอรี่ของคุณ บนหน้าจอถัดไปที่คุณจะสามารถที่จะครอบตัดภาพได้ตามต้องการ';
+$lang['You can customize the display by adding CSS rules to'] = 'คุณสามารถปรับแต่งการแสดงผลโดยการใช้โค๊ด CSS';
+$lang['The numeric identifier can be found on the picture edition page, near the thumbnail.'] = 'ระบุตัวเลขที่สามารถพบได้บนหน้ารูปภาพใกล้ภาพขนาดย่อ';
+$lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'ใส่แท็ก <b>%header_manager%</b> ที่คุณต้องการที่จะแสดงภาพ';
+$lang['No banner added yet'] = 'ยังไม่มีแบนเนอร์';
+$lang['Display banner on photo page'] = 'แสดงแบนเนอร์บนหน้าภาพ';
+$lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'สำหรับ MontBlancXL และ BlancMontXL ขนาดรอบคอบคือ 900 × 190';
+$lang['Choose the part of the image you want to use as your header.'] = 'เลือกส่วนของภาพที่คุณต้องการใช้เป็นส่วนหัวของคุณ';
 ?>
