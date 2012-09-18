@@ -1,0 +1,1 @@
+Header Manager giver mulighed for, let at håndtere galleribannere.  Du kan uploade et billede fra din computer eller benytte et billede, som allerede er i dit galleri.
