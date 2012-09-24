@@ -44,4 +44,6 @@ $lang['With text'] = 'Z tekstem';
 $lang['You can customize the display by adding CSS rules to'] = 'Możesz zmieniać sposób wyświetlania poprzez dodanie reguł CSS do';
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Możesz załadować własny nagłówek lub wybrać któryś ze swojej galerii. W następnym kroku będzie możliwość przycięcia obrazka.';
 $lang['or choose a picture from the gallery'] = 'lub wybierz zdjęcie z galerii';
+$lang['Default banner'] = 'Domyślny baner';
+$lang['Display banner on photo page'] = 'Wyświetlaj baner na stronach zdjęć';
 ?>
