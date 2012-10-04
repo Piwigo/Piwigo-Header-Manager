@@ -21,7 +21,7 @@ function header_manager_install()
   }
   else
   {
-    $new_conf = unserialize($conf['header_manager']);
+    $new_conf = is_string($conf['header_manager']) ? unserialize($conf['header_manager']) : $conf['header_manager'];
     if (!isset($new_conf['banner_on_picture']))
     {
       $new_conf['banner_on_picture'] = true;

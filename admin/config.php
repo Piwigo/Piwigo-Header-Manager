@@ -66,7 +66,7 @@ if (get_banner($conf['header_manager']['image']) === false)
 
 $template->assign(array(
   'banners' => list_banners(true),
-  'CONF_PAGE_BANNER' => htmlspecialchars($conf['page_banner']),
+  'CONF_PAGE_BANNER' => stripslashes(htmlspecialchars($conf['page_banner'])),
   'BANNER_IMAGE' => $conf['header_manager']['image'],
   'BANNER_DISPLAY' => $conf['header_manager']['display'],
   'BANNER_ON_PICTURE' => $conf['header_manager']['banner_on_picture']
