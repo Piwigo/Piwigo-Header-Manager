@@ -45,4 +45,5 @@ $lang['You can customize the display by adding CSS rules to'] = 'Pode personaliz
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Pode carregar uma imagem de cabeçalho personalizado ou selecione uma da sua galeria. Na próxima tela, poderá cortar a imagem.';
 $lang['or choose a picture from the gallery'] = 'ou escolher uma foto da galeria';
 $lang['Default banner'] = 'Bandeira por defeito';
+$lang['Display banner on photo page'] = 'Exibir a bandeira na página de fotografias';
 ?>
