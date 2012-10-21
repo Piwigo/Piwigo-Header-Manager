@@ -61,14 +61,24 @@ function jOnRelease() {ldelim}
 </form>
 
 {else}
-{footer_script require="jquery"}
-jQuery(".showInfo").tipTip({ldelim}
-    delay: 0,
-    fadeIn: 200,
-    fadeOut: 200,
-    maxWidth: '300px',
-  });
-{/footer_script}
+{footer_script require="jquery"}{literal}
+jQuery(".showInfo").tipTip({
+  delay: 0,
+  fadeIn: 200,
+  fadeOut: 200,
+  maxWidth: '300px',
+});
+
+$("input").bind("keydown", function(event) {
+  var keycode = event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode);
+  if (keycode == 13 && $("input[name='picture_id']").val() != '') {
+    $("input[name='upload_gallery_image']").click();
+    return false;
+  } else {
+    return true;
+  }
+});
+{/literal}{/footer_script}
 
 <form method="post" action="" ENCTYPE="multipart/form-data">
   <fieldset>
