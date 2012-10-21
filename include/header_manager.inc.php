@@ -47,7 +47,7 @@ SELECT *
   // use default banner
   if (!isset($banner))
   {
-    if ($conf['header_manager']['image'] == 'random')
+    if ( empty($conf['header_manager']['image']) or $conf['header_manager']['image'] == 'random')
     {
       $banners = list_banners();
       if (!count($banners)) return $page_banner;

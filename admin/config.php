@@ -21,7 +21,7 @@ if (isset($_POST['save_config']))
   $conf['header_manager'] = array(
     'width' => $conf['header_manager']['width'],
     'height' => $conf['header_manager']['height'],
-    'image' => $_POST['image'],
+    'image' => @$_POST['image'],
     'display' => $_POST['display'],
     'banner_on_picture' => isset($_POST['banner_on_picture']),
     );
@@ -59,7 +59,7 @@ DELETE FROM '.HEADER_MANAGER_TABLE.'
 }
 
 // config template
-if (get_banner($conf['header_manager']['image']) === false)
+if ( empty($conf['header_manager']['image']) or get_banner($conf['header_manager']['image']) === false )
 {
   $conf['header_manager']['image'] = 'random';
 }
