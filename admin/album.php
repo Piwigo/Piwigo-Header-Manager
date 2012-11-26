@@ -65,7 +65,7 @@ $cat_id = $_GET['cat_id'];
 // +-----------------------------------------------------------------------+
 if (isset($_POST['save_banner']))
 {
-  if ($_POST['image'] == 'default')
+  if ( !isset($_POST['image']) or $_POST['image'] == 'default')
   {
     $query = '
 DELETE FROM '.HEADER_MANAGER_TABLE.'

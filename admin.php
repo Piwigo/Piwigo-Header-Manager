@@ -16,13 +16,13 @@ if ($page['tab'] != 'album')
   $tabsheet->add('add', l10n('Add a banner'), HEADER_MANAGER_ADMIN . '-add');
   $tabsheet->select($page['tab']);
   $tabsheet->assign();
-
-  // template
-  $template->assign(array(
-    'CONFIG_URL' => HEADER_MANAGER_ADMIN . '-config',
-    'ADD_IMAGE_URL' => HEADER_MANAGER_ADMIN . '-add',
-    ));
 }
+
+// template
+$template->assign(array(
+  'CONFIG_URL' => HEADER_MANAGER_ADMIN . '-config',
+  'ADD_IMAGE_URL' => HEADER_MANAGER_ADMIN . '-add',
+  ));
 
 // include page
 include(HEADER_MANAGER_PATH . 'admin/' . $page['tab'] . '.php');

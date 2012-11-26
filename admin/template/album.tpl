@@ -19,12 +19,17 @@
     </div>
     {/foreach}
   {else}
-    {'No banner added yet'|@translate}
+    <p style="text-align:left;">
+      {'No banner added yet'|@translate}<br>
+      <a href="{$ADD_IMAGE_URL}">{'Add a banner'|@translate}</a>
+    </p>
   {/if}
     
+  {if $banners}
   <p class="actionButtons">
     <label><input type="checkbox" name="deep" value="1" {if $BANNER_DEEP}checked="checked"{/if}> {'Apply to sub-albums'|@translate}</label>
     <br><br>
     <input type="submit" name="save_banner" value="{'Submit'|@translate}" class="submit">
   </p>
+  {/if}
 </form>
