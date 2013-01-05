@@ -31,9 +31,9 @@ function header_manager_install()
   }
 
   // banners directory
-  if ( file_exists(PWG_LOCAL_DIR) and !file_exists(PWG_LOCAL_DIR . 'banners/') ) 
+  if (!file_exists(PHPWG_ROOT_PATH . PWG_LOCAL_DIR . 'banners/')) 
   {
-    mkdir(PWG_LOCAL_DIR . 'banners/', 0755);
+    mkdir(PHPWG_ROOT_PATH . PWG_LOCAL_DIR . 'banners/', 0755);
   }
 
   // banners table

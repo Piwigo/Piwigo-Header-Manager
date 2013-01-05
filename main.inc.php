@@ -13,7 +13,7 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 global $prefixeTable;
 define('HEADER_MANAGER_PATH',    PHPWG_PLUGINS_PATH . 'header_manager/');
 define('HEADER_MANAGER_ADMIN',   get_root_url() . 'admin.php?page=plugin-header_manager');
-define('HEADER_MANAGER_DIR',     PWG_LOCAL_DIR . 'banners/');
+define('HEADER_MANAGER_DIR',     PHPWG_ROOT_PATH . PWG_LOCAL_DIR . 'banners/');
 define('HEADER_MANAGER_TABLE',   $prefixeTable . 'category_banner');
 define('HEADER_MANAGER_VERSION', 'auto');
 
