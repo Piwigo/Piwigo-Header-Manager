@@ -1,0 +1,2 @@
+Gerenciador de cabeçalhos pemite de modo simples gerenciar banners nos seus álbuns. Você pode enviar uma foto do seu computador ou usar uma que já esteja em seus álbuns.
+
