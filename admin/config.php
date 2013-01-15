@@ -9,6 +9,7 @@ if ( pwg_get_session_var('added_banner')!==null and $conf['header_manager']['ima
   pwg_unset_session_var('added_banner');
 }
 
+
 // save config
 if (isset($_POST['save_config']))
 {
@@ -29,6 +30,7 @@ if (isset($_POST['save_config']))
   
   array_push($page['infos'], l10n('Information data registered in database'));
 }
+
 
 // delete banner
 if (isset($_GET['delete_banner']))
@@ -57,6 +59,47 @@ DELETE FROM '.HEADER_MANAGER_TABLE.'
     array_push($page['warnings'], l10n('File/directory read error').' : ' . HEADER_MANAGER_DIR . $_GET['delete_banner']);
   }
 }
+
+if (isset($_GET['delete_cat_banner']))
+{
+    $query = '
+DELETE FROM '.HEADER_MANAGER_TABLE.'
+  WHERE category_id = "'.$_GET['delete_cat_banner'].'"
+;';
+    pwg_query($query);
+}
+
+
+// album banners
+$query = '
+SELECT
+    id,
+    name,
+    permalink,
+    dir,
+    image,
+    deep
+  FROM '.HEADER_MANAGER_TABLE.' AS h
+    INNER JOIN '.CATEGORIES_TABLE.' AS c
+    ON h.category_id = c.id
+  ORDER BY global_rank ASC
+;';
+$categories = hash_from_query($query, 'id');
+
+foreach ($categories as $category)
+{
+  $tpl_cat =
+    array(
+      'NAME'        => get_cat_display_name_from_id($category['id'], HEADER_MANAGER_ADMIN.'-album&amp;cat_id='),
+      'ID'          => $category['id'],
+      'IMAGE'       => get_filename_wo_extension($category['image']),
+      'DEEP'        => $category['deep'],
+      'U_DELETE'    => HEADER_MANAGER_ADMIN.'-config&amp;delete_cat_banner='.$category['id'],
+    );
+  
+  $template->append('categories', $tpl_cat);
+}
+
 
 // config template
 if ( empty($conf['header_manager']['image']) or get_banner($conf['header_manager']['image']) === false )

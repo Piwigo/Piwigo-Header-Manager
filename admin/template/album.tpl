@@ -15,7 +15,10 @@
       <span class="actions">
         <input type="radio" name="image" value="{$image.NAME}" id="banner-{$image.NAME}" {if $BANNER_IMAGE==$image.NAME}checked="checked"{/if}><br>&nbsp;
       </span>
-      <label for="banner-{$image.NAME}"><img src="{$image.THUMB}" alt="{$image.NAME}"></label> 
+      <span class="banner-wrapper">
+        <span class="banner-size">{$image.SIZE[0]} &times; {$image.SIZE[1]} px</span>
+        <label for="banner-{$image.NAME}"><img src="{$image.THUMB}" alt="{$image.NAME}"></label>
+      </span>
     </div>
     {/foreach}
   {else}

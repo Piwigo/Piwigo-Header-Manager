@@ -32,5 +32,10 @@ $lang['Add a banner'] = 'Add a banner';
 $lang['Display banner on photo page'] = 'Display banner on photo page';
 
 $lang['Default banner'] = 'Default banner';
+$lang['Album specific banners'] = 'Album specific banners';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'In order to add a specific banner, go to the admin page of the desired album.';
+$lang['Restore default banner'] = 'Restore default banner';
+$lang['Non recursive'] = 'Non recursive';
+$lang['Recursive'] = 'Recursive';
 
 ?>

@@ -32,5 +32,10 @@ $lang['Add a banner'] = 'Ajouter une bannière';
 $lang['Display banner on photo page'] = 'Afficher la bannière sur la page des photos';
 
 $lang['Default banner'] = 'Bannière par défaut';
+$lang['Album specific banners'] = 'Bannières spécifiques par album';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Afin d\'ajouter une bannière spécifique, rendez-vous sur la page d\'administration de l\'album.';
+$lang['Restore default banner'] = 'Restaurer la bannière par défaut';
+$lang['Non recursive'] = 'Non récursif';
+$lang['Recursive'] = 'Récursif';
 
 ?>

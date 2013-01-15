@@ -49,7 +49,7 @@ SELECT *
   {
     if ( empty($conf['header_manager']['image']) or $conf['header_manager']['image'] == 'random')
     {
-      $banners = list_banners();
+      $banners = array_values(list_banners());
       if (!count($banners)) return $page_banner;
       $banner = $banners[ mt_rand(0, count($banners)-1) ];
     }

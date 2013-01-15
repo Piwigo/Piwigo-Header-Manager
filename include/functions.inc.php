@@ -16,13 +16,16 @@ function list_banners($delete_orphans=false)
     if ( in_array($file, array('.','..','index.php','.svn')) ) continue;
     if ( !in_array(strtolower(get_extension($file)), array('jpg','jpeg','png','gif')) ) continue;
     if ( strpos($file, '-thumbnail')!==false ) continue;
-
-    array_push($banners, get_banner($file));
     
-    if ( $delete_orphans and !file_exists($banners[ count($banners)-1 ]['THUMB']) )
+    $banner = get_banner($file);
+
+    if ( $delete_orphans and !file_exists($banner['THUMB']) )
     {
-      @unlink($banners[ count($banners)-1 ]['PATH']);
-      array_pop($banners);
+      @unlink($banner['PATH']);
+    }
+    else
+    {
+      $banners[ get_filename_wo_extension($banner['NAME']) ] = $banner;
     }
   }
   

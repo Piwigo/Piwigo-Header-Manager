@@ -5,6 +5,13 @@ jQuery("input[name='display']").change(function() {
   jQuery(".display-help:not(#"+ jQuery(this).val() +")").slideUp();
   jQuery("#"+ jQuery(this).val()).slideDown();
 });
+jQuery(".showImage").tipTip({
+  delay: 0,
+  fadeIn: 200,
+  fadeOut: 200,
+  maxWidth: '300px',
+  defaultPosition: 'top'
+});
 {/literal}{/footer_script}
 
 <div class="titrePage">
@@ -40,14 +47,15 @@ jQuery("input[name='display']").change(function() {
       <input type="radio" name="image" value="random" id="banner-random" {if $BANNER_IMAGE=='random'}checked="checked"{/if}>
       <label for="banner-random"><b>{'Random'|@translate}</b></label>
     </div>
-    {foreach from=$banners item=image}
+    {foreach from=$banners item=image key=name}
     <div class="banner-radio">
       <span class="actions">
         <input type="radio" name="image" value="{$image.NAME}" id="banner-{$image.NAME}" {if $BANNER_IMAGE==$image.NAME}checked="checked"{/if}><br>
       </span>
       <span class="banner-wrapper">
         <a href="{$CONFIG_URL}&amp;delete_banner={$image.NAME}" title="{'Delete'|@translate}" onclick="return confirm('{'Are you sure?'|@translate|@escape:javascript}');" class="delete-banner">&times;</a>
-        <label for="banner-{$image.NAME}"><img src="{$image.THUMB}" alt="{$image.NAME}"></label>
+        <span class="banner-size">{$image.SIZE[0]} &times; {$image.SIZE[1]} px</span>
+        <label for="banner-{$image.NAME}" title="{$name}"><img src="{$image.THUMB}" alt="{$image.NAME}"></label>
       </span>
     </div>
     {/foreach}
@@ -59,5 +67,27 @@ jQuery("input[name='display']").change(function() {
     <a href="{$ADD_IMAGE_URL}">{'Add a banner'|@translate}</a>
   </fieldset>
 
-  <p><input type="submit" name="save_config" value="{'Submit'|@translate}" class="submit"></p>
+  <p class="formButtons"><input type="submit" name="save_config" value="{'Submit'|@translate}" class="submit"></p>
+  
+  <fieldset>
+    <legend>{'Album specific banners'|@translate}</legend>
+    <i>{'In order to add a specific banner, go to the admin page of the desired album.'|@translate}</i>
+    
+  {if $categories}
+    <ul id="album_banners">
+    {foreach from=$categories item=cat}
+      <li>
+        {$cat.NAME}
+        <a class="showImage" title="<img src='{$banners[$cat.IMAGE].THUMB}'>"><img src="{$HEADER_MANAGER_PATH}admin/template/image_{$cat.DEEP}.png"></a>
+        <a href="{$cat.U_DELETE}" title="{'Restore default banner'|@translate}" onclick="return confirm('{'Are you sure?'|@translate|@escape:javascript}');"><img src="{$themeconf.admin_icon_dir}/delete.png"></a>
+      </li>
+    {/foreach}
+    </ul>
+    
+    <p>
+      <img src="{$HEADER_MANAGER_PATH}admin/template/image_0.png"> : {'Non recursive'|@translate} &bull; 
+      <img src="{$HEADER_MANAGER_PATH}admin/template/image_1.png"> : {'Recursive'|@translate}
+    </p>
+  {/if}
+  </fieldset>
 </form>
