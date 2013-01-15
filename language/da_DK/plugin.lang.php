@@ -46,4 +46,9 @@ $lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'Pla
 $lang['Random'] = 'Tilfældigt';
 $lang['Select an image'] = 'Vælg et billede';
 $lang['The numeric identifier can be found on the picture edition page, near the thumbnail.'] = 'Den numeriske identifikation finder man på billedredigeringssiden, tæt på miniaturebilledet.';
+$lang['Album specific banners'] = 'Albumspecifikke bannere';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'For at tilføje et specifikt banner, skal du gå til administrationssiden hørende til det ønskede album.';
+$lang['Non recursive'] = 'Ikke rekursiv';
+$lang['Recursive'] = 'Rekursiv';
+$lang['Restore default banner'] = 'Gendan standardbanner';
 ?>
