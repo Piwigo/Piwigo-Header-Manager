@@ -46,4 +46,9 @@ $lang['You can upload a custom header image or select one from your gallery. On 
 $lang['or choose a picture from the gallery'] = 'vai izvēlaties attēlu no galerijas';
 $lang['Default banner'] = 'Baneris pēc noklusējuma';
 $lang['Display banner on photo page'] = 'Rādīt baneri uz foto lapas';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Lai pievienotu īpašu baneri, dodieties uz izvēlētā albūma administratora lapu.';
+$lang['Restore default banner'] = 'Atjaunot noklusēto baneri';
+$lang['Album specific banners'] = 'Albūmam specifiskie baneri';
+$lang['Non recursive'] = 'Ne rekursīvs';
+$lang['Recursive'] = 'Rekursīvs';
 ?>
