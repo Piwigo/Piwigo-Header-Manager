@@ -46,4 +46,9 @@ $lang['You can upload a custom header image or select one from your gallery. On 
 $lang['or choose a picture from the gallery'] = 'ή επιλέξτε μια εικόνα από τη συλλογή';
 $lang['Default banner'] = 'Προεπιλεγμένο μπάνερ';
 $lang['Display banner on photo page'] = 'Προβολή του banner στη σελίδα φωτογραφίας';
+$lang['Album specific banners'] = 'Επικεφαλίδα ειδικά για το λεύκωμα ';
+$lang['Restore default banner'] = 'Επαναφορά προεπιλεγμένης επικεφαλίδας';
+$lang['Recursive'] = 'Αναδρομική';
+$lang['Non recursive'] = 'Μη αναδρομική';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Για να προσθέσετε μια συγκεκριμένη Επικεφαλίδα , μεταβείτε στη σελίδα διαχείρισης του επιθυμητού λευκώματος.';
 ?>
