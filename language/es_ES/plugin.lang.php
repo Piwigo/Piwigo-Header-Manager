@@ -46,4 +46,9 @@ $lang['You can upload a custom header image or select one from your gallery. On 
 $lang['or choose a picture from the gallery'] = 'o elegir una imagen desde la galería';
 $lang['Default banner'] = 'Cabecera por defecto';
 $lang['Display banner on photo page'] = 'Visualice la bandera en la página de la foto';
+$lang['Album specific banners'] = 'Album específicos de bandera ';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Con el fin de añadir una bandera específica, vaya a la página de administración del álbum deseado.';
+$lang['Non recursive'] = 'No recursivo';
+$lang['Recursive'] = 'Recursivo';
+$lang['Restore default banner'] = 'Restaurar bandera por defecto';
 ?>
