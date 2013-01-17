@@ -46,4 +46,9 @@ $lang['With text'] = 'Csak szöveg';
 $lang['You can customize the display by adding CSS rules to'] = 'A megjelenítés testreszabható a CSS szabályok megadásával';
 $lang['Default banner'] = 'Alapértelmezett banner';
 $lang['Display banner on photo page'] = 'Banner megjelenítése a kép oldalon';
+$lang['Recursive'] = 'Rekurzív';
+$lang['Restore default banner'] = 'Alapértelmezett banner';
+$lang['Album specific banners'] = 'Egyedi album bannerek';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Egyedi banner hozzáadásához menjen az admin oldalon a kívánt albumra';
+$lang['Non recursive'] = 'Nem rekurzív';
 ?>
