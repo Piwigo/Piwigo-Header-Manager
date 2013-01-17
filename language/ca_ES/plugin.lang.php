@@ -46,4 +46,9 @@ $lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'Pos
 $lang['Random'] = 'Aleatori';
 $lang['Select an image'] = 'Seleccioneu una imatge';
 $lang['The numeric identifier can be found on the picture edition page, near the thumbnail.'] = 'L\'identificador numèric es pot trobar a la pàgina d\'edició de la imatge, al costat de la miniatura.';
+$lang['Album specific banners'] = 'Bàners dels l\'àlbums especificats';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'En coptes d\'afegir bàner, aneu a la pàgina d\'administrador de l\'àlbum desitjat.';
+$lang['Non recursive'] = 'No recursiu';
+$lang['Recursive'] = 'Recursiu';
+$lang['Restore default banner'] = 'Restaura el bàner per defecte';
 ?>
