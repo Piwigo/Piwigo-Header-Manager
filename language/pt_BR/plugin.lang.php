@@ -46,4 +46,9 @@ $lang['Choose an image from your computer'] = 'Escolha uma imagem do seu computa
 $lang['Choose the part of the image you want to use as your header.'] = 'Escolha a parte da imagem que você quer usar no seu cabeçalho.';
 $lang['Crop banner image'] = 'Recorta a imagem do Banner';
 $lang['Default banner'] = 'Banner padrão';
+$lang['Album specific banners'] = 'Banners para álbuns específicos';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Para poder adicionar um banner específico, vá para a página administrativa do álbum desejado.';
+$lang['Non recursive'] = 'Não recursivo';
+$lang['Recursive'] = 'Recursivo';
+$lang['Restore default banner'] = 'Restaurar banner padrão.';
 ?>
