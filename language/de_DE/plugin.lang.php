@@ -46,4 +46,9 @@ $lang['You can upload a custom header image or select one from your gallery. On 
 $lang['or choose a picture from the gallery'] = 'oder wählen Sie ein Bild aus der Galerie';
 $lang['Default banner'] = 'Standard Banner';
 $lang['Display banner on photo page'] = 'Zeige Banner auf der Foto Seite';
+$lang['Album specific banners'] = 'Album spezifisches Banner';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Um ein spezifisches Banner hinzuzufügen, auf die Admin Seite des gewünschten Albums gehen';
+$lang['Non recursive'] = 'Nicht rekursiv';
+$lang['Recursive'] = 'Rekursiv';
+$lang['Restore default banner'] = 'Default Banner aktivieren';
 ?>
