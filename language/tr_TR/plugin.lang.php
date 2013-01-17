@@ -46,4 +46,9 @@ $lang['You can upload a custom header image or select one from your gallery. On 
 $lang['or choose a picture from the gallery'] = 'yada galeriden bir resim seçin';
 $lang['Default banner'] = 'Varsayılan afiş (banner)';
 $lang['Display banner on photo page'] = 'Fotoğraf sayfasında banner görüntüle';
+$lang['Recursive'] = 'Yinelenen';
+$lang['Restore default banner'] = 'Varsayılan afişe dön';
+$lang['Non recursive'] = 'Yinelenmeyen';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Belirli bir afiş eklemeden önce, eklenecek albüme ait yönetim sayfasına gidin.';
+$lang['Album specific banners'] = 'Albüme has afişler (banner)';
 ?>
