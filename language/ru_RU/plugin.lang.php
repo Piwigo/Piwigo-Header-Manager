@@ -46,4 +46,9 @@ $lang['You can upload a custom header image or select one from your gallery. On 
 $lang['or choose a picture from the gallery'] = 'или выбрать изображение из галереи';
 $lang['Default banner'] = 'Баннер по умолчанию';
 $lang['Display banner on photo page'] = 'Отображать баннер на странице с фото';
+$lang['Album specific banners'] = 'Специальные баннеры альбома';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Чтобы добавить баннер перейдите в панель администратора нужного альбома';
+$lang['Non recursive'] = 'Без рекурсии';
+$lang['Recursive'] = 'Рекурсивно ';
+$lang['Restore default banner'] = 'Восстановить баннер используемый по-умолчанию';
 ?>
