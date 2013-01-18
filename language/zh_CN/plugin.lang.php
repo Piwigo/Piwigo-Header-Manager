@@ -46,4 +46,9 @@ $lang['Picture id.'] = '图片id。';
 $lang['Put <b>%header_manager%</b> where you want to display the image.'] = '在您想显示图片的地方放置 <b>%header_manager%</b> 。';
 $lang['Random'] = '随机';
 $lang['Select an image'] = '选择一张图片';
+$lang['Album specific banners'] = '相册的横幅';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = '要添加横幅，需要到相册的管理员页面';
+$lang['Non recursive'] = '不用递归';
+$lang['Recursive'] = '递归';
+$lang['Restore default banner'] = '恢复默认的横幅';
 ?>
