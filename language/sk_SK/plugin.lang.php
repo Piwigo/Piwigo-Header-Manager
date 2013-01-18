@@ -46,4 +46,9 @@ $lang['You can upload a custom header image or select one from your gallery. On 
 $lang['or choose a picture from the gallery'] = 'alebo vybrať fotku z galérie';
 $lang['Default banner'] = 'Predvolený baner';
 $lang['Display banner on photo page'] = 'Zobraziť banner na stánke fotiek';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Na zoradenie pridaného vybraný baner, choďte na administrátorskú stránku želaného albumu.';
+$lang['Restore default banner'] = 'Obnoviť predvolený baner';
+$lang['Non recursive'] = 'Nie rekurzívne';
+$lang['Recursive'] = 'Rekurzívne';
+$lang['Album specific banners'] = 'Banery vybraného albumu';
 ?>
