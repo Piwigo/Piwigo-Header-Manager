@@ -46,4 +46,9 @@ $lang['Banner deleted'] = 'Банерът е изтрит';
 $lang['Banner added'] = 'Банерът е добавен';
 $lang['Banner'] = 'Банер';
 $lang['Add a banner'] = 'Добави банер';
+$lang['Non recursive'] = 'Без рекурс';
+$lang['Recursive'] = 'С рекурс';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'За да добавите банер идете на страницата за администриране на желания албум.';
+$lang['Album specific banners'] = 'Албум с обособени банери';
+$lang['Restore default banner'] = 'Възстанови банера по подразбиране';
 ?>
