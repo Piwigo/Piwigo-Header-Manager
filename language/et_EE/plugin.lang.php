@@ -46,4 +46,9 @@ $lang['The numeric identifier can be found on the picture edition page, near the
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Sul on võimalus päisesse pilt üles laadida või valida oma galeriist. Pärast seda saad pilti sobivasse mõõtu kärpida.';
 $lang['or choose a picture from the gallery'] = 'või vali pilt galeriist';
 $lang['You can customize the display by adding CSS rules to'] = 'Saad seadistada kuva lisades CSS reegleid';
+$lang['Album specific banners'] = 'Albumile määratud bänner';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Konkreetsele albumile bänneri lisamiseks mine vastava albumi administreerimise lehele';
+$lang['Non recursive'] = 'Mittekorduv';
+$lang['Recursive'] = 'Korduv';
+$lang['Restore default banner'] = 'Taasta vaikimisi bänner';
 ?>
