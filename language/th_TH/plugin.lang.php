@@ -46,4 +46,8 @@ $lang['No banner added yet'] = 'ยังไม่มีแบนเนอร์
 $lang['Display banner on photo page'] = 'แสดงแบนเนอร์บนหน้าภาพ';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'สำหรับ MontBlancXL และ BlancMontXL ขนาดรอบคอบคือ 900 × 190';
 $lang['Choose the part of the image you want to use as your header.'] = 'เลือกส่วนของภาพที่คุณต้องการใช้เป็นส่วนหัวของคุณ';
+$lang['Album specific banners'] = 'โฆษณาเฉพาะอัลบั้ม';
+$lang['Non recursive'] = 'ไม่เวียนซ้ำ';
+$lang['Recursive'] = 'แบบเวียนซ้ำ';
+$lang['Restore default banner'] = 'เรียกคืนค่าเริ่มต้นของป้ายโฆษณา';
 ?>
