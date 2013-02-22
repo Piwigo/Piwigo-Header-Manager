@@ -46,4 +46,9 @@ $lang['You can upload a custom header image or select one from your gallery. On 
 $lang['or choose a picture from the gallery'] = 'ou escolher uma foto da galeria';
 $lang['Default banner'] = 'Bandeira por defeito';
 $lang['Display banner on photo page'] = 'Exibir a bandeira na página de fotografias';
+$lang['Album specific banners'] = 'Banners de álbuns específicos ';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'De forma adicionar um banner específico, vá à página de administrador do álbum desejado.';
+$lang['Non recursive'] = 'Não recursivo';
+$lang['Recursive'] = 'Recursivo';
+$lang['Restore default banner'] = 'Restaurar banner por defeito';
 ?>
