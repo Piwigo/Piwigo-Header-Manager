@@ -44,4 +44,8 @@ $lang['With text'] = 'Med tekst';
 $lang['You can customize the display by adding CSS rules to'] = 'Du kan endre utseende ved å legge til CSS regler';
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Du kan laste opp et eget toppbilde, eller velge ett fra galleriet ditt. På neste side kan du også beskjære bilde.';
 $lang['or choose a picture from the gallery'] = 'eller velg et bilde fra galleriet';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'For å legge til valgte banner, gå til administratorsiden for gjeldende album.';
+$lang['Non recursive'] = 'Ikke rekursiv';
+$lang['Display banner on photo page'] = 'Vis banner på bildesider';
+$lang['Default banner'] = 'Standard banner';
 ?>
