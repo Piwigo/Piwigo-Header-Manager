@@ -48,4 +48,7 @@ $lang['In order to add a specific banner, go to the admin page of the desired al
 $lang['Non recursive'] = 'Ikke rekursiv';
 $lang['Display banner on photo page'] = 'Vis banner på bildesider';
 $lang['Default banner'] = 'Standard banner';
+$lang['Album specific banners'] = 'Spesifikke album bannere';
+$lang['Recursive'] = 'Rekursiv';
+$lang['Restore default banner'] = 'Gjenopprett standard banner';
 ?>
