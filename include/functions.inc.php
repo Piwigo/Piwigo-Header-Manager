@@ -58,7 +58,7 @@ function get_banner($file)
  * @param: array picture(width, height[, coi])
  * @return: array crop(display_width, display_height, l, r, t, b, coi(x, y))
  */
-function get_crop_display($picture)
+function hm_get_crop_display($picture)
 {
   global $conf;
   

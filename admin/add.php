@@ -15,7 +15,7 @@ else if (isset($_POST['submit_crop']))
   
   $banner = get_banner($_POST['picture_file']);
   $img = new banner_image($banner['PATH']);
-  $crop = get_crop_display(array('width'=>$img->get_width(), 'height'=>$img->get_height()));
+  $crop = hm_get_crop_display(array('width'=>$img->get_width(), 'height'=>$img->get_height()));
   
   $img->banner_resize(
     $banner['PATH'],
@@ -115,7 +115,7 @@ if (defined('IN_CROP'))
   $template->assign(array(
     'IN_CROP' => true,
     'picture' => $picture,
-    'crop' => get_crop_display($picture),
+    'crop' => hm_get_crop_display($picture),
     ));
 }
 // upload form

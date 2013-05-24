@@ -56,6 +56,8 @@ $tabsheet->set_id('album');
 $tabsheet->select('headermanager');
 $tabsheet->assign();
 
+$page['active_menu'] = get_active_menu('album');
+
 
 $cat_id = $_GET['cat_id'];
 
