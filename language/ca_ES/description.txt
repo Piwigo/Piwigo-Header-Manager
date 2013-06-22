@@ -1,0 +1,1 @@
+Header Manager permet gestionar banners de forma molt simple. Pots pujar una foto des del teu ordenador o utilitzar una foto que ja estigui a la galeria.
