@@ -1,1 +1,1 @@
-El administrador de cabeceras permite gestionar fácilmente las cabeceras de la galería. Puedes subir una imagen desde tu ordenador o utilizar una imagen que ya está en la galería
+Header Manager permite gestionar banners de forma muy simple. Puedes subir una imagen desde tu ordenador o utilizar una imagen que ya esté en la galería.
