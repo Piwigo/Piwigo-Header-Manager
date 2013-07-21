@@ -37,7 +37,7 @@ function jOnRelease() {ldelim}
 }
 {/footer_script}
 
-<form method="post" action="">
+<form method="post" action="{$F_ACTION}">
 <fieldset>
   <legend>{'Crop banner image'|@translate}</legend>
   {'Choose the part of the image you want to use as your header.'|@translate}<br>
@@ -80,19 +80,19 @@ $("input").bind("keydown", function(event) {
 });
 {/literal}{/footer_script}
 
-<form method="post" action="" ENCTYPE="multipart/form-data">
+<form method="post" action="{$F_ACTION}" ENCTYPE="multipart/form-data">
   <fieldset>
     <legend>{'Default banner size'|@translate}</legend>
     
     <label>
       {'Width'|@translate}:
-      <input type="text" name="width" size="4" value="{$BANNER_WIDTH}">px
+      <input type="text" name="width" size="4" value="{$BANNER_WIDTH}"> px
     </label>
     <br>
     <br>
     <label>
       {'Height'|@translate}:
-      <input type="text" name="height" size="4" value="{$BANNER_HEIGHT}">px
+      <input type="text" name="height" size="4" value="{$BANNER_HEIGHT}"> px
     </label>
     <br>
     <br>
@@ -114,7 +114,7 @@ $("input").bind("keydown", function(event) {
     
     <b>{'or choose a picture from the gallery'|@translate}</b>
     <blockquote>
-      {'Picture id.'|@translate} <a class="showInfo" title="{'The numeric identifier can be found on the picture edition page, near the thumbnail.'|@translate}">i</a>
+      {'Picture id.'|@translate} <a class="icon-info-circled-1 showInfo" title="{'The numeric identifier can be found on the picture edition page, near the thumbnail.'|@translate}"></a>
       <input type="text" name="picture_id" size="5">
       <input type="submit" name="upload_gallery_image" value="{'Use'|@translate}" class="submit">
     </blockquote>

@@ -39,7 +39,14 @@ else if (isset($_POST['submit_crop']))
   $_SESSION['page_infos'][] = l10n('Banner added');
   pwg_set_session_var('added_banner', $_POST['picture_file']);
   
-  redirect(HEADER_MANAGER_ADMIN);
+  if (!empty($_GET['redirect']))
+  {
+    redirect($_GET['redirect']);
+  }
+  else
+  {
+    redirect(HEADER_MANAGER_ADMIN);
+  }
 }
 
 // copy picture from gallery
@@ -140,6 +147,8 @@ else
     'BANNER_HEIGHT' => $conf['header_manager']['height'],
     ));
 }
+
+$template->assign('F_ACTION', HEADER_MANAGER_ADMIN . '-add' .(!empty($_GET['redirect']) ? '&amp;redirect='.urlencode($_GET['redirect']) : ''));
 
 $template->set_filename('header_manager', dirname(__FILE__).'/template/add.tpl');
 

@@ -22,11 +22,12 @@
     </div>
     {/foreach}
   {else}
-    <p style="text-align:left;">
-      {'No banner added yet'|@translate}<br>
-      <a href="{$ADD_IMAGE_URL}">{'Add a banner'|@translate}</a>
-    </p>
+    <p style="text-align:left;">{'No banner added yet'|@translate}</p>
   {/if}
+  
+  <p style="text-align:left;">
+    <a href="{$ADD_IMAGE_URL}&redirect={$F_ACTION|urlencode}">{'Add a banner'|@translate}</a>
+  </p>
     
   {if $banners}
   <p class="actionButtons">

@@ -3,7 +3,7 @@
 Plugin Name: Header Manager
 Version: auto
 Description: Header Manager allows to simply manage gallery banners. You can upload a picture from your computer or use a picture already in the gallery.
-Plugin URI: http://piwigo.org/ext/extension_view.php?eid=608
+Plugin URI: auto
 Author: Mistic
 Author URI: http://www.strangeplanet.fr
 */

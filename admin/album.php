@@ -29,7 +29,7 @@ if(!defined("PHPWG_ROOT_PATH")) die ("Hacking attempt!");
 
 check_status(ACCESS_ADMINISTRATOR);
 
-check_input_parameter('cat_id', $_GET, false, PATTERN_ID);
+check_input_parameter('cat_id', $_GET, false, PATTERN_ID, true);
 
 $admin_album_base_url = get_root_url().'admin.php?page=album-'.$_GET['cat_id'];
 $self_url = HEADER_MANAGER_ADMIN.'-album&amp;cat_id='.$_GET['cat_id'];

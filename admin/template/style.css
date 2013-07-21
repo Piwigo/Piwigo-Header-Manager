@@ -51,14 +51,6 @@
       line-height:10px;
     }
 
-.showInfo {
-  position:static;
-  display:inline-block;
-  padding:1px 6px;
-  width:auto;
-  font-size:0.8em;
-}
-
 #album_banners {
   list-style:disc;
   margin:10px 0 0 25px;
