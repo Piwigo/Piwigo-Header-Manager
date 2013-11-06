@@ -38,4 +38,17 @@ $lang['Default banner'] = 'Apriora paĝa rubando';
 $lang['Image only'] = 'Nur bildo';
 $lang['Incorrect file type,'] = 'Malĝusta dosiertipo,';
 $lang['No banner added yet'] = 'Ankoraŭ neniu paĝa rubando aldoniĝis';
+$lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Vi povas alŝuti tajloritan paĝokapan bildon aŭ selekti iun en via galerio. Sur la venonta ekrano, eblos al vi stuci la bildon.';
+$lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Por MontBlancXL kaj BlancMontXL, rekomendiĝas la grandeco 900&times;190.';
+$lang['Gallery title above image'] = 'Titolo de la galerio super la bildo';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Por aldoni specifan rubandon, iru al la administropaĝo de la fotaro.';
+$lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'Aldoni <b>%header_manager%</b> kie vi deziras vidigi la bildon.';
+$lang['You can customize the display by adding CSS rules to'] = 'Vi povas tajlori la vidigaĵon aldonante CSS-regulojn al';
+$lang['Non recursive'] = 'Nerikura';
+$lang['Picture id.'] = 'Bildidenteco';
+$lang['Recursive'] = 'Rikura';
+$lang['Restore default banner'] = 'Restaŭri aprioran rubandon';
+$lang['The numeric identifier can be found on the picture edition page, near the thumbnail.'] = 'La numera identigilo troviĝas sur la bildoredaktopaĝo, apud la miniaturo.';
+$lang['Use'] = 'Uzi';
+$lang['or choose a picture from the gallery'] = 'aŭ elekti bildon en la galerio';
 ?>
