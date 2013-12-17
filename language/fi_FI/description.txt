@@ -1,0 +1,1 @@
+Ylätunnisteen Hallinta mahdollistaa yksinkertaisen bannereiden hallinnan. Voit lisätä kuvan tietokoneeltasi tai käyttää galleriassa jo olevaa kuvaa.
