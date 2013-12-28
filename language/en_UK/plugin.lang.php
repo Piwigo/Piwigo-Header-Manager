@@ -5,9 +5,10 @@ $lang['Crop banner image'] = 'Crop banner image';
 $lang['Choose the part of the image you want to use as your header.'] = 'Choose the part of the image you want to use as your header.';
 $lang['Banner added'] = 'Banner added';
 $lang['Incorrect file type,'] = 'Incorrect file type,';
+$lang['Respect %s aspect ratio'] =  'Respect %s aspect ratio';
 
 // upload page
-$lang['Default banner size'] = 'Default banner size';
+$lang['Banner size'] = 'Banner size';
 $lang['Select an image'] = 'Select an image';
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.';
 $lang['Choose an image from your computer'] = 'Choose an image from your computer';

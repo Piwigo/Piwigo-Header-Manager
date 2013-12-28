@@ -96,7 +96,7 @@ $("input").bind("keydown", function(event) {
 
 <form method="post" action="{$F_ACTION}" ENCTYPE="multipart/form-data">
   <fieldset>
-    <legend>{'Default banner size'|translate}</legend>
+    <legend>{'Banner size'|translate}</legend>
     
     <label>
       {'Width'|translate}:

@@ -5,9 +5,10 @@ $lang['Crop banner image'] = 'Recadrer la bannière';
 $lang['Choose the part of the image you want to use as your header.'] = 'Choississez la zone de l\'image à utiliser comme bannière.';
 $lang['Banner added'] = 'Bannière ajoutée';
 $lang['Incorrect file type,'] = 'Type de fichier incorrect';
+$lang['Respect %s aspect ratio'] =  'Respecter le ratio %s';
 
 // upload page
-$lang['Default banner size'] = 'Taille par défaut de la banière';
+$lang['Banner size'] = 'Taille de la banière';
 $lang['Select an image'] = 'Sélectionner une image';
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Vous pouvez télécharger une bannière personnalisée ou utiliser une photo de votre galerie. Sur l\'écran suivant il vous sera proposé de recadrer votre image.';
 $lang['Choose an image from your computer'] = 'Choisir une image stockée sur l\'ordinateur';
