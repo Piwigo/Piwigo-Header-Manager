@@ -1,5 +1,5 @@
 <?php
-if (!defined('HEADER_MANAGER_PATH')) die('Hacking attempt!');
+defined('HEADER_MANAGER_PATH') or die('Hacking attempt!');
 
 global $template, $page;
 load_language('plugin.lang', HEADER_MANAGER_PATH);
@@ -30,5 +30,3 @@ include(HEADER_MANAGER_PATH . 'admin/' . $page['tab'] . '.php');
 $template->assign('HEADER_MANAGER_PATH', HEADER_MANAGER_PATH);
 
 $template->assign_var_from_handle('ADMIN_CONTENT', 'header_manager');
-
-?>

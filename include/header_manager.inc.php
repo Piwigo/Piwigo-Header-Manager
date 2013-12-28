@@ -1,5 +1,5 @@
 <?php
-if (!defined('HEADER_MANAGER_PATH')) die('Hacking attempt!');
+defined('HEADER_MANAGER_PATH') or die('Hacking attempt!');
 
 /**
  * add personal banner to page banner
@@ -8,9 +8,15 @@ function header_manager_render($page_banner)
 {
   global $conf, $user, $template, $page;
   
-  if ( script_basename() == 'picture' and !$conf['header_manager']['banner_on_picture'] )
+  if (script_basename() == 'picture' and !$conf['header_manager']['banner_on_picture'])
   {
-    return null;
+    return '';
+  }
+  
+  // no support for Kardon (not enough space)
+  if ($user['theme'] == 'kardon')
+  {
+    return $page_banner;
   }
   
   // search banner for a specific category
@@ -47,47 +53,48 @@ SELECT *
   // use default banner
   if (!isset($banner))
   {
-    if ( empty($conf['header_manager']['image']) or $conf['header_manager']['image'] == 'random')
+    if (empty($conf['header_manager']['image']) or $conf['header_manager']['image'] == 'random')
     {
       $banners = array_values(list_banners());
-      if (!count($banners)) return $page_banner;
+      if (!count($banners))
+      {
+        return $page_banner;
+      }
       $banner = $banners[ mt_rand(0, count($banners)-1) ];
     }
     else
     {
       $banner = get_banner($conf['header_manager']['image']);
-      if ($banner === false) return $page_banner;
+      if ($banner === false)
+      {
+        return $page_banner;
+      }
     }
   }
   
   // for MontBlancXL and BlancMontXL the banner is displayed as background of the header
-  if ( in_array($user['theme'], array('blancmontxl','montblancxl')) )
+  if (in_array($user['theme'], array('blancmontxl','montblancxl')))
   {
-    $template->append('head_elements',
-'<style type="text/css">
-#theHeader { background: transparent url('.$banner['PATH'].') center bottom no-repeat; }
-</style>'
+    $template->block_html_style(null,
+      '#theHeader { background: transparent url('.$banner['PATH'].') center bottom no-repeat; }'
       );
 
     if ($conf['header_manager']['display'] == 'image_only')
     {
-      $page_banner = null;
+      $page_banner = '';
     }
     else
     {
-      $page_banner = str_replace('%header_manager%', null, $page_banner);
+      $page_banner = str_replace('%header_manager%', '', $page_banner);
     }
   }
-  // no support for Kardon (not enough space)
-  else if ($user['theme'] != 'kardon')
+  else
   {
-    $template->append('head_elements',
-'<style type="text/css">
-#theHeader div.banner { background:transparent url(\''.$banner['PATH'].'\') center center no-repeat;height:'.$banner['SIZE'][1].'px;line-height:'.($banner['SIZE'][1]-12).'px;font-size:2.5em;color:#fff;text-shadow:0 0 5px #000;text-align:center; }
-</style>'
+    $template->block_html_style(null,
+      '#theHeader div.banner { background:transparent url(\''.$banner['PATH'].'\') center center no-repeat; height:'. ($banner['SIZE'][1]) .'px; line-height:'. ($banner['SIZE'][1]-12) .'px; font-size:2.5em; color:#fff; text-shadow:0 0 5px #000; text-align:center; }'
       );
     
-    $banner_img = '<div class="banner">'.($conf['header_manager']['display']=='with_title' ? $conf['gallery_title'] : '&nbsp;').'</div>';
+    $banner_img = '<div class="banner">'. ($conf['header_manager']['display']=='with_title' ? $conf['gallery_title'] : '&nbsp;') .'</div>';
     
     if ($conf['header_manager']['display'] == 'with_text')
     {
@@ -95,7 +102,7 @@ SELECT *
     }
     else
     {
-      $page_banner = '<a href="'.get_gallery_home_url().'">'.$banner_img.'</a>';
+      $page_banner = '<a href="'. get_gallery_home_url() .'">'. $banner_img .'</a>';
     }
   }
 
@@ -108,5 +115,3 @@ function hm_uppercats_sort($a, $b)
   $ids = explode(',', $page['category']['uppercats']);
   return array_search($a['category_id'], $ids) < array_search($b['category_id'], $ids);
 }
-
-?>

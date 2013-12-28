@@ -1,5 +1,5 @@
 <?php
-if (!defined('HEADER_MANAGER_PATH')) die('Hacking attempt!');
+defined('HEADER_MANAGER_PATH') or die('Hacking attempt!');
 
 // cancel crop
 if (isset($_POST['cancel_crop']))
@@ -14,21 +14,15 @@ else if (isset($_POST['submit_crop']))
   include_once(HEADER_MANAGER_PATH . 'include/banner.class.php');
   
   $banner = get_banner($_POST['picture_file']);
-  $img = new banner_image($banner['PATH']);
-  $crop = hm_get_crop_display(array('width'=>$img->get_width(), 'height'=>$img->get_height()));
   
+  $img = new banner_image($banner['PATH']);
   $img->banner_resize(
     $banner['PATH'],
-    $_POST['x'],
-    $_POST['y'], 
-    $_POST['x2'],
-    $_POST['y2'],
-    $crop['display_width'],
-    $crop['display_height']
+    $_POST
     );
   $img->destroy();
   
-  $img = new banner_image($banner['PATH']);
+  $img = new pwg_image($banner['PATH']);
   $img->pwg_resize(
     $banner['THUMB'],
     230, 70, 80,
@@ -66,7 +60,7 @@ SELECT
   
   if (!pwg_db_num_rows($result))
   {
-    array_push($page['errors'], l10n('Unknown picture id'));
+    $page['errors'][] = l10n('Unknown picture id');
   }
   else
   {
@@ -85,11 +79,11 @@ else if (isset($_POST['upload_new_image']))
   
   if ($file['error'] > 0) 
   {
-    array_push($page['errors'], l10n('Unknown upload error'));
+    $page['errors'][] = l10n('Unknown upload error');
   }
-  else if ( !in_array($file['type'], array('image/jpeg','image/png','image/gif')) )
+  else if (!in_array($file['type'], array('image/jpeg','image/png','image/gif')))
   {
-    array_push($page['errors'], l10n('Incorrect file type,').' '.sprintf(l10n('Allowed file types: %s.'), 'jpg, png, gif'));
+    $page['errors'][] = l10n('Incorrect file type,').' '.l10n('Allowed file types: %s.', 'jpg, png, gif');
   }
   
   if (count($page['errors']) == 0)
@@ -116,7 +110,7 @@ if (defined('IN_CROP'))
   $conf['header_manager']['width'] = intval($_POST['width']);
   $conf['header_manager']['height'] = intval($_POST['height']);
   conf_update_param('header_manager', serialize($conf['header_manager']));
-    
+
   $picture['banner_src'] = HEADER_MANAGER_DIR . $picture['filename'];
   
   $template->assign(array(
@@ -148,8 +142,7 @@ else
     ));
 }
 
-$template->assign('F_ACTION', HEADER_MANAGER_ADMIN . '-add' .(!empty($_GET['redirect']) ? '&amp;redirect='.urlencode($_GET['redirect']) : ''));
+$template->assign('F_ACTION', HEADER_MANAGER_ADMIN . '-add' .
+  (!empty($_GET['redirect']) ? '&amp;redirect='.urlencode($_GET['redirect']) : ''));
 
-$template->set_filename('header_manager', dirname(__FILE__).'/template/add.tpl');
-
-?>
+$template->set_filename('header_manager', realpath(HEADER_MANAGER_PATH . 'admin/template/add.tpl'));

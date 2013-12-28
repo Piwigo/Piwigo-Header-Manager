@@ -8,7 +8,7 @@ Author: Mistic
 Author URI: http://www.strangeplanet.fr
 */
 
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
 global $prefixeTable;
 define('HEADER_MANAGER_PATH',    PHPWG_PLUGINS_PATH . 'header_manager/');
@@ -36,37 +36,15 @@ include_once(HEADER_MANAGER_PATH . 'include/header_manager.inc.php');
 
 
 /**
- * update plugin & unserialize conf
+ * initialization
  */
 function header_manager_init()
 {
   global $conf, $pwg_loaded_plugins, $page;
   
-  if (
-    HEADER_MANAGER_VERSION == 'auto' or
-    $pwg_loaded_plugins['header_manager']['version'] == 'auto' or
-    version_compare($pwg_loaded_plugins['header_manager']['version'], HEADER_MANAGER_VERSION, '<')
-  )
-  {
-    include_once(HEADER_MANAGER_PATH . 'include/install.inc.php');
-    header_manager_install();
-    
-    if ( $pwg_loaded_plugins['header_manager']['version'] != 'auto' and HEADER_MANAGER_VERSION != 'auto' )
-    {
-      $query = '
-UPDATE '. PLUGINS_TABLE .'
-SET version = "'. HEADER_MANAGER_VERSION .'"
-WHERE id = "header_manager"';
-      pwg_query($query);
-      
-      $pwg_loaded_plugins['header_manager']['version'] = HEADER_MANAGER_VERSION;
-      
-      if (defined('IN_ADMIN'))
-      {
-        $_SESSION['page_infos'][] = 'Header Manager updated to version '. HEADER_MANAGER_VERSION;
-      }
-    }
-  }
+  include_once(HEADER_MANAGER_PATH . 'maintain.inc.php');
+  $maintain = new header_manager_maintain('header_manager');
+  $maintain->autoUpdate(HEADER_MANAGER_VERSION, 'install');
   
   $conf['header_manager'] = unserialize($conf['header_manager']);
 }
@@ -76,10 +54,10 @@ WHERE id = "header_manager"';
  */
 function header_manager_admin_menu($menu) 
 {
-  array_push($menu, array(
+  $menu[] = array(
     'NAME' => 'Header Manager',
     'URL' => HEADER_MANAGER_ADMIN,
-  ));
+    );
   return $menu;
 }
 
@@ -101,4 +79,14 @@ function header_manager_tab($sheets, $id)
   return $sheets;
 }
 
-?>
+/**
+ * clean table when categories are deleted
+ */
+function header_manager_delete_categories($ids)
+{
+  $query = '
+DELETE FROM '.HEADER_MANAGER_TABLE.'
+  WHERE category_id IN('.implode(',', $ids).')
+;';
+  pwg_query($query);
+}

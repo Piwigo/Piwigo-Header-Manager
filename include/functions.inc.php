@@ -7,19 +7,23 @@ if (!defined('HEADER_MANAGER_PATH')) die('Hacking attempt!');
  */
 function list_banners($delete_orphans=false)
 { 
-  if (!file_exists(HEADER_MANAGER_DIR)) return array();
+  if (!file_exists(HEADER_MANAGER_DIR))
+  {
+    return array();
+  }
+  
   $dir = scandir(HEADER_MANAGER_DIR);
   $banners = array();
   
   foreach ($dir as $file)
   {
-    if ( in_array($file, array('.','..','index.php','.svn')) ) continue;
-    if ( !in_array(strtolower(get_extension($file)), array('jpg','jpeg','png','gif')) ) continue;
-    if ( strpos($file, '-thumbnail')!==false ) continue;
+    if (in_array($file, array('.','..','index.php','.svn'))) continue;
+    if (!in_array(strtolower(get_extension($file)), array('jpg','jpeg','png','gif'))) continue;
+    if (strpos($file, '-thumbnail')!==false) continue;
     
     $banner = get_banner($file);
 
-    if ( $delete_orphans and !file_exists($banner['THUMB']) )
+    if ($delete_orphans and !file_exists($banner['THUMB']))
     {
       @unlink($banner['PATH']);
     }
@@ -42,8 +46,8 @@ function get_banner($file)
   {
     return array(
       'NAME' => $file,
-      'PATH' => get_root_url().HEADER_MANAGER_DIR . $file,
-      'THUMB' => get_root_url().HEADER_MANAGER_DIR . get_filename_wo_extension($file) . '-thumbnail.'. get_extension($file),
+      'PATH' => get_root_url() . HEADER_MANAGER_DIR . $file,
+      'THUMB' => get_root_url() . HEADER_MANAGER_DIR . get_filename_wo_extension($file) . '-thumbnail.' . get_extension($file),
       'SIZE' => getimagesize(HEADER_MANAGER_DIR . $file),
       );
   }
@@ -84,46 +88,27 @@ function hm_get_crop_display($picture)
   $crop['coi']['x'] = ($picture['coi']['r']+$picture['coi']['l'])/2;
   $crop['coi']['y'] = ($picture['coi']['b']+$picture['coi']['t'])/2;
   
-  // define default crop frame
-  if ($picture['width'] > $conf['header_manager']['width'])
+  $crop['desired_width'] = $conf['header_manager']['width'];
+  $crop['desired_height'] = $conf['header_manager']['height'];
+  
+  if ($picture['width'] > $crop['desired_width'])
   {
-    $crop['display_width'] = $conf['header_manager']['width'];
-    $crop['display_height'] = round($picture['height']*$crop['display_width']/$picture['width']);
-    
-    $crop['coi']['x'] = round($crop['coi']['x']*$crop['display_width']/$picture['width']);
-    $crop['coi']['y'] = round($crop['coi']['y']*$crop['display_height']/$picture['height']);
-    
-    $crop['l'] = 0;
-    $crop['r'] = $conf['header_manager']['width'];
-    $crop['t'] = max(0, $crop['coi']['y']-$conf['header_manager']['height']/2);
-    $crop['b'] = min($crop['display_height'], $crop['t']+$conf['header_manager']['height']);
+    $crop['box_width'] = $crop['desired_width'];
+    $crop['box_height'] = round($picture['height']*$crop['box_width']/$picture['width']);
   }
   else
   {
-    $crop['display_width'] = $picture['width'];
-    $crop['display_height'] = $picture['height'];
-    
-    $adapted_crop_height = round($conf['header_manager']['height']*$picture['width']/$conf['header_manager']['width']);
-    
-    $crop['l'] = 0;
-    $crop['r'] = $picture['width'];
-    $crop['t'] = max(0, $crop['coi']['y']-$adapted_crop_height/2);
-    $crop['b'] = min($crop['display_height'], $crop['t']+$adapted_crop_height);
+    $crop['box_width'] = $picture['width'];
+    $crop['box_height'] = $picture['height'];
   }
+  
+  $crop['real_width'] = $picture['width'];
+  $crop['real_height'] = round($crop['desired_height']*$crop['real_width']/$crop['desired_width']);
+  
+  $crop['l'] = 0;
+  $crop['r'] = $crop['real_width'];
+  $crop['t'] = max(0, $crop['coi']['y']-$crop['real_height']/2);
+  $crop['b'] = min($picture['height'], $crop['t']+$crop['real_height']);
   
   return $crop;
 }
-
-/**
- * clean table when categroies are delete
- */
-function header_manager_delete_categories($ids)
-{
-  $query = '
-DELETE FROM '.HEADER_MANAGER_TABLE.'
-  WHERE category_id IN('.implode(',', $ids).')
-;';
-  pwg_query($query);
-}
-
-?>
