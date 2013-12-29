@@ -11,6 +11,7 @@ class header_manager_maintain extends PluginMaintain
       'image' => 'random',
       'display' => 'image_only',
       'banner_on_picture' => true,
+      'keep_ratio' => true
     );
 
   function install($plugin_version, &$errors=array())
@@ -26,12 +27,18 @@ class header_manager_maintain extends PluginMaintain
     else
     {
       $new_conf = is_string($conf['header_manager']) ? unserialize($conf['header_manager']) : $conf['header_manager'];
+      
       if (!isset($new_conf['banner_on_picture']))
       {
         $new_conf['banner_on_picture'] = true;
-        $conf['header_manager'] = serialize($new_conf);
-        conf_update_param('header_manager', $conf['header_manager']);
       }
+      else if (!isset($new_conf['keep_ratio']))
+      {
+        $new_conf['keep_ratio'] = true;
+      }
+      
+      $conf['header_manager'] = serialize($new_conf);
+      conf_update_param('header_manager', $conf['header_manager']);
     }
 
     // banners directory

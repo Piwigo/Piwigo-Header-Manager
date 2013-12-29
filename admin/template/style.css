@@ -61,3 +61,10 @@
   #album_banners img {
     vertical-align:middle;
   }
+  
+.jcrop-holder.fixed-ratio .ord-s,
+.jcrop-holder.fixed-ratio .ord-n,
+.jcrop-holder.fixed-ratio .ord-e,
+.jcrop-holder.fixed-ratio .ord-w {
+  display:none;
+}

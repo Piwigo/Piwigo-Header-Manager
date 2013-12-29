@@ -16,7 +16,7 @@
     boxWidth: {$crop.box_width}, 
     boxHeight: {$crop.box_height},
     trueSize: [{$picture.width}, {$picture.height}],
-    aspectRatio: {$crop.real_width}/{$crop.real_height},
+    {if $keep_ratio}aspectRatio: {$crop.real_width}/{$crop.real_height},{/if}
     setSelect: [{$crop.l}, {$crop.t}, {$crop.r}, {$crop.b}],
     onChange: function(sel) {
       jQuery("input[name='x']").val(Math.round(sel.x));
@@ -36,6 +36,7 @@
   },
   function() {
     jcrop_api = this;
+    {if $keep_ratio}jQuery(".jcrop-holder").addClass('fixed-ratio');{/if}
   });
   
   jQuery('input[name="keep_ratio"]').on('change', function() {
@@ -45,6 +46,7 @@
     if (!jQuery(this).prop('checked')) {
       jcrop_api.release();
     }
+    jQuery(".jcrop-holder").toggleClass('fixed-ratio');
   });
 }());
 {/footer_script}
@@ -59,7 +61,7 @@
   <ul>
     <li><b>{'Width'|translate}:</b> <span id="width"></span>px</li>
     <li><b>{'Height'|translate}:</b> <span id="height"></span>px</li>
-    <li><label><input type="checkbox" name="keep_ratio" checked> {'Respect %s aspect ratio'|translate:($crop.desired_width|cat:'/'|cat:$crop.desired_height)}</label></li>
+    <li><label><input type="checkbox" name="keep_ratio" {if $keep_ratio}checked{/if}> {'Respect %s aspect ratio'|translate:($crop.desired_width|cat:'/'|cat:$crop.desired_height)}</label></li>
   </ul>
   
   <input type="hidden" name="x">

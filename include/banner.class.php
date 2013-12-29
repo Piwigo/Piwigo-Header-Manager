@@ -50,17 +50,4 @@ class banner_image extends pwg_image
     // everything should be OK if we are here!
     return $this->get_resize_result($destination_filepath, $crop['width'], $crop['height'], $starttime);
   }
-  
-  private function get_resize_result($destination_filepath, $width, $height, $time=null)
-  {
-    return array(
-      'source'      => $this->source_filepath,
-      'destination' => $destination_filepath,
-      'width'       => $width,
-      'height'      => $height,
-      'size'        => floor(filesize($destination_filepath) / 1024).' KB',
-      'time'        => $time ? number_format((get_moment() - $time) * 1000, 2, '.', ' ').' ms' : null,
-      'library'     => $this->library,
-    );
-  }
 }
