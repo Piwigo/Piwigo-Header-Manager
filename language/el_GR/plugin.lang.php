@@ -27,7 +27,6 @@ $lang['Banner'] = 'Banner';
 $lang['Choose an image from your computer'] = 'Επιλέξτε μια εικόνα από τον υπολογιστή σας';
 $lang['Choose the part of the image you want to use as your header.'] = 'Επιλέξτε ένα μέρος της εικόνας που θέλετε να χρησιμοποιήσετε ως header σας';
 $lang['Crop banner image'] = 'Περικοπή εικόνας banner';
-$lang['Default banner size'] = 'Προκαθορισμένο μέγεθος banner ';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Για MontBlancXL και BlancMontXL, προτεινόμενο μέγεθος είναι 900&times;190.';
 $lang['Gallery title above image'] = 'Τίτλος γκαλερί πάνω από την εικόνα';
 $lang['Image only'] = 'Μόνο Εικόνες';
@@ -51,4 +50,6 @@ $lang['Restore default banner'] = 'Επαναφορά προεπιλεγμένη
 $lang['Recursive'] = 'Αναδρομική';
 $lang['Non recursive'] = 'Μη αναδρομική';
 $lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Για να προσθέσετε μια συγκεκριμένη Επικεφαλίδα , μεταβείτε στη σελίδα διαχείρισης του επιθυμητού λευκώματος.';
+$lang['Respect %s aspect ratio'] = 'Με Τήρηση %s Αναλογία διαστάσεων';
+$lang['Banner size'] = 'Μέγεθος Banner';
 ?>
