@@ -34,7 +34,6 @@ $lang['Choose an image from your computer'] = 'Vælg et billede på din computer
 $lang['Choose the part of the image you want to use as your header.'] = 'Vælg den del af billedet, du ønsker at anvende som header.';
 $lang['Crop banner image'] = 'Beskær bannerbilledet';
 $lang['Default banner'] = 'Standardbanner';
-$lang['Default banner size'] = 'Standardbanners størrelse';
 $lang['Display banner on photo page'] = 'Vis banner på fotoside';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'For MontBlancXL og BlancMontXL er den anbefalede størrelse 900&times;190.';
 $lang['Gallery title above image'] = 'Galleris titel over billede';
@@ -51,4 +50,6 @@ $lang['In order to add a specific banner, go to the admin page of the desired al
 $lang['Non recursive'] = 'Ikke rekursiv';
 $lang['Recursive'] = 'Rekursiv';
 $lang['Restore default banner'] = 'Gendan standardbanner';
+$lang['Banner size'] = 'Banner størelse';
+$lang['Respect %s aspect ratio'] = 'Respekter %s formatforhold';
 ?>
