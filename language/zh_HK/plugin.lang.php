@@ -36,7 +36,6 @@ $lang['Choose an image from your computer'] = '從電腦中選擇一張圖片';
 $lang['Choose the part of the image you want to use as your header.'] = '選擇部分圖片作為你的標題。';
 $lang['Crop banner image'] = '裁切橫額圖片';
 $lang['Default banner'] = '預設橫額';
-$lang['Default banner size'] = '預設橫額尺寸';
 $lang['Display banner on photo page'] = '顯示橫額在圖片頁上';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = '如選用MontBlancXL和BlancMontXL，建議大小為900×190。';
 $lang['Gallery title above image'] = '畫廊標題設於圖片上方';
@@ -51,4 +50,6 @@ $lang['Unknown picture id'] = '未知的圖片ID';
 $lang['Use'] = '使用';
 $lang['With text'] = '帶有文字';
 $lang['Image only'] = '只有圖片';
+$lang['Banner size'] = '網幅廣告尺寸';
+$lang['Respect %s aspect ratio'] = '尊重%s的縱橫比';
 ?>
