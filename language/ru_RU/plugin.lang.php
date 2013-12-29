@@ -27,7 +27,6 @@ $lang['Banner'] = 'Баннер';
 $lang['Choose an image from your computer'] = 'Выберите файл с изображением';
 $lang['Choose the part of the image you want to use as your header.'] = 'Выберите область изображения, которое Вы хотите использовать в качестве заголовка.';
 $lang['Crop banner image'] = 'Кадрировать изображение баннера';
-$lang['Default banner size'] = 'Размер баннера по умолчанию';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Рекомендуемый размер для тем оформления MontBlancXL и BlancMontXL 900&times;190.';
 $lang['Gallery title above image'] = 'Название галереи над изображением';
 $lang['Image only'] = 'Только изображение';
@@ -51,4 +50,6 @@ $lang['In order to add a specific banner, go to the admin page of the desired al
 $lang['Non recursive'] = 'Без рекурсии';
 $lang['Recursive'] = 'Рекурсивно ';
 $lang['Restore default banner'] = 'Восстановить баннер используемый по-умолчанию';
+$lang['Banner size'] = 'Размер баннера';
+$lang['Respect %s aspect ratio'] = 'Пропорции %s соотношение сторон';
 ?>
