@@ -31,7 +31,6 @@ $lang['With text'] = 'Com texto';
 $lang['You can customize the display by adding CSS rules to'] = 'Você pode personalizar a exibição adicionado regras de CSS';
 $lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'Você pode enviar uma imagem personalizada do cabeçalho ou selecionar uma de seus albuns. Na próxima tela você poderá recortar a imagem.';
 $lang['or choose a picture from the gallery'] = 'ou escolha uma foto dos seus álbuns';
-$lang['Default banner size'] = 'Tamanho padrão para o Banner';
 $lang['Display banner on photo page'] = 'Mostra banner na página de foto';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Para MontBlanXL e BlanMontXL, aconselha-se o tamanho 900&times;190.';
 $lang['Gallery title above image'] = 'Título do Álbum abaixo da Imagem';
@@ -51,4 +50,6 @@ $lang['In order to add a specific banner, go to the admin page of the desired al
 $lang['Non recursive'] = 'Não recursivo';
 $lang['Recursive'] = 'Recursivo';
 $lang['Restore default banner'] = 'Restaurar banner padrão.';
+$lang['Banner size'] = 'Tamanho do banner';
+$lang['Respect %s aspect ratio'] = 'Respeitar a razão da proporção %s';
 ?>
