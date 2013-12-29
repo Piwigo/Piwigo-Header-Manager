@@ -27,7 +27,6 @@ $lang['Banner'] = 'Banner';
 $lang['Choose an image from your computer'] = 'Scegli un\'immagine dal tuo computer';
 $lang['Choose the part of the image you want to use as your header.'] = 'Scegli la parte dell\'immagine che desideri utilizzare come intestazione.';
 $lang['Crop banner image'] = 'Ridefinire il banner';
-$lang['Default banner size'] = 'Dimensione di default del banner';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Per MontBlancXL e BlancMontXL, la dimensione consigliata è di 900&times;190.';
 $lang['Gallery title above image'] = 'Titolo della Galleria sopra l\'immagine';
 $lang['Image only'] = 'Solo immagine';
@@ -51,4 +50,6 @@ $lang['Non recursive'] = 'Non ricorsivo';
 $lang['Recursive'] = 'Ricorsivo';
 $lang['Restore default banner'] = 'Ripristino banner predefinito';
 $lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Per aggiungere uno specifico banner, andare alla pagina di amministrazione del l\'album desiderato.';
+$lang['Respect %s aspect ratio'] = 'Rispetta proporzioni %s';
+$lang['Banner size'] = 'Dimensione Banner';
 ?>
