@@ -27,7 +27,6 @@ $lang['Banner'] = 'Banner';
 $lang['Choose an image from your computer'] = 'Kies een afbeelding op uw computer';
 $lang['Choose the part of the image you want to use as your header.'] = 'Kies het deel van de afbeelding dat u wilt gebruiken.';
 $lang['Crop banner image'] = 'Banner-afbeelding bijsnijden';
-$lang['Default banner size'] = 'Standaard bannergrootte';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Voor MontBlancXL en BlancMontXL is de aanbevolen grootte 900&times;190.';
 $lang['Gallery title above image'] = 'Titel van de galerie boven de afbeelding';
 $lang['Image only'] = 'Alleen afbeelding';
@@ -51,4 +50,6 @@ $lang['Non recursive'] = 'Niet herhalend';
 $lang['Recursive'] = 'Herhalend';
 $lang['Restore default banner'] = 'Terug naar de standaardinstellingen van de banner';
 $lang['Album specific banners'] = 'Album specifieke banner';
+$lang['Banner size'] = 'Bannergrootte';
+$lang['Respect %s aspect ratio'] = 'Bewaar %s beeldverhouding';
 ?>
