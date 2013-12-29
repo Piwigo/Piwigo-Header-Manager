@@ -37,7 +37,6 @@ $lang['Image only'] = 'Само снимка';
 $lang['Gallery title above image'] = 'Заглавие отгоре над снимката в Галерия';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'За MontBlancXL и BlancMontXL, разширен размер е 900&times;190.';
 $lang['Display banner on photo page'] = 'Показване на банер на страниците със снимки';
-$lang['Default banner size'] = 'Размер по подразбиране за банер';
 $lang['Default banner'] = 'Банер по подразбиране';
 $lang['Crop banner image'] = 'Преоразмеряване на банер';
 $lang['Choose the part of the image you want to use as your header.'] = 'Избери коя част от снимката искаш да ползваш за заглавие';
@@ -51,4 +50,6 @@ $lang['Recursive'] = 'С рекурс';
 $lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'За да добавите банер идете на страницата за администриране на желания албум.';
 $lang['Album specific banners'] = 'Албум с обособени банери';
 $lang['Restore default banner'] = 'Възстанови банера по подразбиране';
+$lang['Respect %s aspect ratio'] = 'Отношение %s пропорции';
+$lang['Banner size'] = 'Размер банер';
 ?>
