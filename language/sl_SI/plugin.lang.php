@@ -40,7 +40,6 @@ $lang['Choose an image from your computer'] = 'Izbiri sliko iz računalnika';
 $lang['Choose the part of the image you want to use as your header.'] = 'Izberite del slike, ki jo želite uporabiti kot glavo';
 $lang['Crop banner image'] = 'Obreži sliko pasice';
 $lang['Default banner'] = 'Privzeta pasica';
-$lang['Default banner size'] = 'Privzeta velikost pasice';
 $lang['Display banner on photo page'] = 'Prikaži pasico na strani s slikami';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Za MontBlancXL in BlancMontXL je priporočena velikost 900&krat;190.';
 $lang['Gallery title above image'] = 'Naslov galerije nad sliko';
@@ -51,4 +50,6 @@ $lang['No banner added yet'] = 'Nobena pasica še ni dodana';
 $lang['Non recursive'] = 'Brez ponavljanja';
 $lang['Picture id.'] = 'ID slike';
 $lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'Vstavi <b>%upravitelja_glave%</b> kjer želiš prikazati sliko.';
+$lang['Respect %s aspect ratio'] = 'Upoštevaj %s razmerje';
+$lang['Banner size'] = 'velikost pasice';
 ?>
