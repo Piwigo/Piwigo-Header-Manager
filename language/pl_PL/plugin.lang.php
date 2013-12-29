@@ -27,7 +27,6 @@ $lang['Banner'] = 'Baner';
 $lang['Choose an image from your computer'] = 'Wybierz obrazek z dysku';
 $lang['Choose the part of the image you want to use as your header.'] = 'Wybierz część obrazka, którego chcesz użyć jako nagłówek';
 $lang['Crop banner image'] = 'Przytnij obrazek banera';
-$lang['Default banner size'] = 'Domyślny rozmiar banera';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Dla skórki MontBlancXL i BlancMontXL zalecany wymiar 900&times;190';
 $lang['Gallery title above image'] = 'Tytuł galerii ponad obrazkiem';
 $lang['Image only'] = 'Tylko obrazek';
@@ -51,4 +50,6 @@ $lang['Non recursive'] = 'Niepowtarzający się';
 $lang['Recursive'] = 'Powtarzający się';
 $lang['Restore default banner'] = 'Powrót do domyślnego banneru';
 $lang['Album specific banners'] = 'Bannery dla konkretnego albumu';
+$lang['Banner size'] = 'Rozmiar banera';
+$lang['Respect %s aspect ratio'] = 'Zachowaj proporcje %s';
 ?>
