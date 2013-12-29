@@ -27,7 +27,6 @@ $lang['Banner'] = 'Bandeira';
 $lang['Choose an image from your computer'] = 'Escolha uma imagem do seu computador';
 $lang['Choose the part of the image you want to use as your header.'] = 'Escolha a parte da imagem que deseja usar no cabeçalho';
 $lang['Crop banner image'] = 'Cortar imagem bandeira';
-$lang['Default banner size'] = 'Bandeira de tamanho por defeito';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Para MontBlancXL e BlancMontXL, tamanho aconselhado é de 900 × 190.';
 $lang['Gallery title above image'] = 'Título da galeria acima da foto';
 $lang['Image only'] = 'Apenas imagem';
@@ -51,4 +50,6 @@ $lang['In order to add a specific banner, go to the admin page of the desired al
 $lang['Non recursive'] = 'Não recursivo';
 $lang['Recursive'] = 'Recursivo';
 $lang['Restore default banner'] = 'Restaurar banner por defeito';
+$lang['Banner size'] = 'Tamanho da bandeira';
+$lang['Respect %s aspect ratio'] = 'Respeitar o rácio de proporção %s';
 ?>
