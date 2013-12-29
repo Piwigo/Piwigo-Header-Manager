@@ -40,7 +40,6 @@ $lang['Choose an image from your computer'] = 'Valitse kuva tietokoneeltasi';
 $lang['Choose the part of the image you want to use as your header.'] = 'Valitse osa kuvasta käytettäväksi ylätunnisteenasi';
 $lang['Crop banner image'] = 'Leikkaa banneri kuvaa';
 $lang['Default banner'] = 'Oletus banneri';
-$lang['Default banner size'] = 'Oletus bannerin koko';
 $lang['Display banner on photo page'] = 'Näytä banneri kuva sivulla';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'MontBlancXL ja BlancMontXL:ää varteen, suositeltu kuvakoko on 900&times;190 pikseliä.';
 $lang['Gallery title above image'] = 'Gallerian otsikko kuvan yläpuolella';
@@ -51,4 +50,6 @@ $lang['No banner added yet'] = 'Banneria ei ole vielä lisätty';
 $lang['Non recursive'] = 'Ei rekursiivinen';
 $lang['Picture id.'] = 'Kuvan tunniste.';
 $lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'Lisää <b>%header_manager%</b> paikkaan, jossa haluat näyttää kuvan.';
+$lang['Banner size'] = 'Bannerin koko';
+$lang['Respect %s aspect ratio'] = 'Kunnioita %s kuvasuhdetta';
 ?>
