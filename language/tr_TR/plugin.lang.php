@@ -27,7 +27,6 @@ $lang['Banner'] = 'Afiş (Banner)';
 $lang['Choose an image from your computer'] = 'Bilgisayarınızdan bir resim seçin';
 $lang['Choose the part of the image you want to use as your header.'] = 'Başlık olarak kullanmak istediğiniz resmin parçasını seçin.';
 $lang['Crop banner image'] = 'Afiş (banner) resmini kırp';
-$lang['Default banner size'] = 'Varsayılan afiş (banner) büyüklüğü';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'MontBlancXL ve BlancMontXL için önerilen büyüklük 900&times;190 dır.';
 $lang['Gallery title above image'] = 'Galeri adı yukarıdaki resim';
 $lang['Image only'] = 'Sadece resim';
@@ -51,4 +50,6 @@ $lang['Restore default banner'] = 'Varsayılan afişe dön';
 $lang['Non recursive'] = 'Yinelenmeyen';
 $lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Belirli bir afiş eklemeden önce, eklenecek albüme ait yönetim sayfasına gidin.';
 $lang['Album specific banners'] = 'Albüme has afişler (banner)';
+$lang['Banner size'] = 'Afiş boyutu';
+$lang['Respect %s aspect ratio'] = '%s boyut oranına bağlı kal';
 ?>
