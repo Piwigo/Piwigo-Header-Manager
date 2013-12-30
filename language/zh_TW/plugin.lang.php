@@ -29,7 +29,6 @@ $lang['Choose an image from your computer'] = '請從您的電腦中選擇一個
 $lang['Choose the part of the image you want to use as your header.'] = '選擇部分的圖片，你要使用你標題。';
 $lang['Crop banner image'] = '裁切橫幅廣告圖片';
 $lang['Default banner'] = '預設橫幅廣告';
-$lang['Default banner size'] = '預設橫幅廣告尺寸';
 $lang['Display banner on photo page'] = '顯示橫幅廣告在圖片頁上';
 $lang['Unknown picture id'] = '未知的圖片ID';
 $lang['Use'] = '使用';
@@ -51,4 +50,6 @@ $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = '對�
 $lang['Gallery title above image'] = '畫廊標題在圖片的上方';
 $lang['Image only'] = '只有圖片';
 $lang['In order to add a specific banner, go to the admin page of the desired album.'] = '為了新增特定的橫幅廣告，前往到所需的相冊的後台管理頁面。';
+$lang['Respect %s aspect ratio'] = '關於 %s 的縱橫比';
+$lang['Banner size'] = '橫幅廣告尺寸';
 ?>
