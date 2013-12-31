@@ -27,7 +27,6 @@ $lang['Banner'] = 'Baneris';
 $lang['Choose an image from your computer'] = 'Izvēlaties attēlu no sava datora';
 $lang['Choose the part of the image you want to use as your header.'] = 'Izvēlaties daļu attēla, ka gribat izmantot kā galveni';
 $lang['Crop banner image'] = 'Apgriezt banera attēlu';
-$lang['Default banner size'] = 'Banera izmērs pēc noklusējuma';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Priekš MontBlancXL un BlancMontXL ieteicamais izmērs ir 900&times;190.';
 $lang['Gallery title above image'] = 'Galerijas nosaukums virs attēla';
 $lang['Image only'] = 'Tikai attēls';
@@ -51,4 +50,6 @@ $lang['Restore default banner'] = 'Atjaunot noklusēto baneri';
 $lang['Album specific banners'] = 'Albūmam specifiskie baneri';
 $lang['Non recursive'] = 'Ne rekursīvs';
 $lang['Recursive'] = 'Rekursīvs';
+$lang['Respect %s aspect ratio'] = 'Respekta %s aspekta attiecība';
+$lang['Banner size'] = 'Banera izmērs';
 ?>
