@@ -31,7 +31,6 @@ $lang['Choose an image from your computer'] = 'Vali pilt oma arvutist';
 $lang['Choose the part of the image you want to use as your header.'] = 'Vali osa pildist, mida tahad kasutada päisena';
 $lang['Crop banner image'] = 'Kärbi bänneri pilti';
 $lang['Default banner'] = 'Vaikimisi valitud bänner';
-$lang['Default banner size'] = 'Vaikimisi valitud bänneri suurus';
 $lang['Display banner on photo page'] = 'Näita bännerit fotode lehel';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'MontBlancXL ja BlancMontXL jaoks soovituslik suurus 900x190';
 $lang['Gallery title above image'] = 'Galerii pealkiri pildi kohal';
@@ -51,4 +50,6 @@ $lang['In order to add a specific banner, go to the admin page of the desired al
 $lang['Non recursive'] = 'Mittekorduv';
 $lang['Recursive'] = 'Korduv';
 $lang['Restore default banner'] = 'Taasta vaikimisi bänner';
+$lang['Banner size'] = 'Reklaami suurus';
+$lang['Respect %s aspect ratio'] = 'Hoia %s kuva suhet';
 ?>
