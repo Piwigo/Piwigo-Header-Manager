@@ -1,1 +1,1 @@
-Header Manager permite gestionar banners de forma muy simple. Puedes subir una imagen desde tu ordenador o utilizar una imagen que ya esté en la galería.
+Header Manager permite sustituir el título que hay en la parte superior sus páginas web, por una imagen. Puede seleccionar entre una imagen, el título de su galería o una imagen con un texto sobreimpreso. La imagen puede subirse desde su disco duro o utilizar una ya existente en su galería.
