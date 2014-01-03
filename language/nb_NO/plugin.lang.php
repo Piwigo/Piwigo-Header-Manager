@@ -27,7 +27,6 @@ $lang['Banner'] = 'Banner';
 $lang['Choose an image from your computer'] = 'Velg et bilde fra datamaskinen';
 $lang['Choose the part of the image you want to use as your header.'] = 'Velg en del av bildet du vil bruke som din banner.';
 $lang['Crop banner image'] = 'Beskjær bannerbilde';
-$lang['Default banner size'] = 'Standard banner størrelse';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'For MontBlancXL og BlancMontXL, anbefalt størrelse er 900&times;190.';
 $lang['Gallery title above image'] = 'Galleriets tittel over bilde';
 $lang['Image only'] = 'Kun bilde';
@@ -51,4 +50,6 @@ $lang['Default banner'] = 'Standard banner';
 $lang['Album specific banners'] = 'Spesifikke album bannere';
 $lang['Recursive'] = 'Rekursiv';
 $lang['Restore default banner'] = 'Gjenopprett standard banner';
+$lang['Respect %s aspect ratio'] = 'Respekter %s størrelsesforhold';
+$lang['Banner size'] = 'Størrelse på banner';
 ?>
