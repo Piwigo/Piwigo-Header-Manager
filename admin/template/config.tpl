@@ -32,7 +32,8 @@ jQuery(".showImage").tipTip({
     
     <label><input type="radio" name="display" value="with_text" {if $BANNER_DISPLAY=='with_text'}checked="checked"{/if}> {'With text'|translate}</label><br>
     <div class="display-help" id="with_text" {if $BANNER_DISPLAY!='with_text'}style="display:none;"{/if}>
-      <textarea rows="5" cols="50" class="description" name="conf_page_banner">{$CONF_PAGE_BANNER}</textarea><br>
+      <textarea rows="5" cols="50" class="description" name="conf_page_banner">{$CONF_PAGE_BANNER}</textarea>
+      {if isset($EXTDESC_BUTTON)}{$EXTDESC_BUTTON}{/if}<br>
       <i>{'Put <b>%header_manager%</b> where you want to display the image.'|translate}</i>
     </div>
     
