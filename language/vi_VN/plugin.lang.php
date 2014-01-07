@@ -40,7 +40,6 @@ $lang['Choose an image from your computer'] = 'Chọn một ảnh từ máy tín
 $lang['Choose the part of the image you want to use as your header.'] = 'Chọn phần của hình ảnh mà bạn muốn dùng để làm header';
 $lang['Crop banner image'] = 'Cắt ảnh banner';
 $lang['Default banner'] = 'Banner mặc định';
-$lang['Default banner size'] = 'Kích thước banner mặc định';
 $lang['Display banner on photo page'] = 'Hiển thị banner trong trang ảnh';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Đối với MontBlancXL và BlancMontXL, kích thước khuyến cáo là 900&times;190.';
 $lang['Gallery title above image'] = 'Tiêu đề gallery nằm trên ảnh';
@@ -51,4 +50,6 @@ $lang['No banner added yet'] = 'Chưa có banner được thêm';
 $lang['Non recursive'] = 'Không đệ quy';
 $lang['Picture id.'] = 'Định danh ảnh';
 $lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'Đặt <b>%header_manager%</b>tại nơi muốn hiển thị ảnh.';
+$lang['Banner size'] = 'Kích thước banner';
+$lang['Respect %s aspect ratio'] = 'Giữ tỉ lệ %s ';
 ?>
