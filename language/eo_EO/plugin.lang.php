@@ -24,7 +24,6 @@ $lang['Album specific banners'] = 'Fotarospecifaj rubandoj';
 $lang['Choose an image from your computer'] = 'Elekti bildon en via komputilo';
 $lang['Choose the part of the image you want to use as your header.'] = 'Elekti la parton de la bildon, kiun vi deziras uzi kiel paĝokapo';
 $lang['Crop banner image'] = 'Stuci la rubandon';
-$lang['Default banner size'] = 'Apriora rubandograndeco';
 $lang['Display banner on photo page'] = 'Vidigi rubandon sur la fotopaĝo';
 $lang['Random'] = 'Hazarda';
 $lang['Select an image'] = 'Selekti bildon';
@@ -51,4 +50,6 @@ $lang['Restore default banner'] = 'Restaŭri aprioran rubandon';
 $lang['The numeric identifier can be found on the picture edition page, near the thumbnail.'] = 'La numera identigilo troviĝas sur la bildoredaktopaĝo, apud la miniaturo.';
 $lang['Use'] = 'Uzi';
 $lang['or choose a picture from the gallery'] = 'aŭ elekti bildon en la galerio';
+$lang['Banner size'] = 'Rubanda grandeco';
+$lang['Respect %s aspect ratio'] = 'Respekti la bildoformaton %s';
 ?>
