@@ -20,39 +20,39 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Add a banner'] = 'افزودن یک بنر ';
+$lang['Add a banner'] = 'افزودنِ یک بنر';
 $lang['Random'] = 'اتفاقی';
 $lang['Recursive'] = 'بازگشت';
 $lang['Respect %s aspect ratio'] = ' %sنسبت تصویر رابطه از   ';
-$lang['Restore default banner'] = '
-تنظیمات پیش فرض بنر';
-$lang['Select an image'] = 'اتخاب تصویر';
-$lang['The numeric identifier can be found on the picture edition page, near the thumbnail.'] = 'شناسه عددی را می توان در صفحه ویرایش تصویر، در نزدیکی تصویر بند انگشتی یافت.';
-$lang['Unknown picture id'] = 'شاناسه عکس نامشخص است';
-$lang['Use'] = 'استفاده';
+$lang['Restore default banner'] = 'بازگشت دادنِ تنظیماتِ پیشفرضِ بنر';
+$lang['Select an image'] = 'انتخابِ یک عکس';
+$lang['The numeric identifier can be found on the picture edition page, near the thumbnail.'] = 'شناسه‌ی عددی را می‌توان در برگه‌ی ویرایش عکس، در نزدیکی عکسِ بند انگشتی پیدا کرد.';
+$lang['Unknown picture id'] = 'شناسه‌ی عکسِ ناشناس';
+$lang['Use'] = 'بکارگیری';
 $lang['With text'] = 'با متن';
-$lang['You can customize the display by adding CSS rules to'] = 'شما می توانید نمایش را با اضافه کردن قوانین CSS برای سفارشی';
-$lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = '
+$lang['You can customize the display by adding CSS rules to'] = 'شما می‌توانید سبکِ نمایش را ویرایش کنید با افزودنِ کدهای CSS به';
+$lang['You can upload a custom header image or select one from your gallery. On the next screen you will be able to crop the image.'] = 'می‌توانید یک سربرگِ سفارشی آپلود کنید یا یک عکس از گالریِ خود انتخاب کنید. در بخشِ بعدی، می‌توانید عکس را ببُرید.';
 شما می توانید یک تصویر سربرگ و یا یکی از گالری خود انتخاب کنید. در صفحه بعد شما قادر خواهید بود برای برش تصویر خواهد بود.';
-$lang['or choose a picture from the gallery'] = '
+$lang['or choose a picture from the gallery'] = 'یا یک عکس از گالریِ خود انتخاب کنید';
 یا انتخاب کنید یک عکس از گالری ';
 $lang['Banner'] = 'بنر';
-$lang['Banner added'] = 'افزودن بنر';
-$lang['Banner deleted'] = 'بنرپاک شد  ';
-$lang['Banner size'] = 'اندازه بنر';
-$lang['Choose an image from your computer'] = 'انتخاب تصویر از روی رایانه ';
-$lang['Choose the part of the image you want to use as your header.'] = 'بخشی از تصویر را که می خواهید به عنوان هدر های خود استفاده کنید را انتخاب کنید.';
-$lang['Crop banner image'] = 'برید بنر ';
-$lang['Default banner'] = 'بنر پیشفرض';
-$lang['Display banner on photo page'] = 'نمایش بنر در صفحه تصویر ';
-$lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'برای ادازه و زمان مناسب MontBlancXL و BlancMontXL، 
+$lang['Banner added'] = 'بنر افزوده شد';
+$lang['Banner deleted'] = 'بنر پاک شد  ';
+$lang['Banner size'] = 'اندازه‌ی بنر';
+$lang['Choose an image from your computer'] = 'یک عکس از کامپیوترتان انتخاب کنید';
+$lang['Choose the part of the image you want to use as your header.'] = 'بخشی از عکس که می‌خواهید به عنوانِ سربرگ بکار ببرید را انتخاب کنید.';
+$lang['Crop banner image'] = 'بریدنِ عکسِ بنر';
+$lang['Default banner'] = 'بنرِ پیشفرض';
+$lang['Display banner on photo page'] = 'نمایش بنر در برگه‌ی عکس';
+$lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'برای MontBlancXL و BlancMontXL، سایزِ پیشنهادی 900&times;190 است.';
 900&times;190.';
-$lang['Gallery title above image'] = 'عنوان گالری تصویر بالا';
+$lang['Gallery title above image'] = 'عنوان گالری بالای عکس';
 $lang['Image only'] = 'فقط عکس';
-$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'به منظور اضافه کردن یک بنر خاص، به صفحه مدیر از آلبوم دلخواه بروید.';
-$lang['Incorrect file type,'] = 'نوع فایل نادرست،';
-$lang['No banner added yet'] = 'هیچ بنری افزوده شد :(';
-$lang['Non recursive'] = '
-بدون بازگشت';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'برای افزودنِ یک بنرِ ویژه‌ی آلبوم، به بخشِ مدیریتِ آلبوم بروید.';
+$lang['Incorrect file type,'] = 'نوع فایلِ نادرست،';
+$lang['No banner added yet'] = 'هنوز هیچ بنری افزوده نشده است';
+$lang['Non recursive'] = 'بدون بازگشت';
 $lang['Picture id.'] = 'شناسه تصویر ';
+$lang['Album specific banners'] = 'بنرِ ویژه‌ی آلبوم';
+$lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'کدِ <b>%header_manager%</b> را جایی که می‌خواهید عکس دیده شود بنویسید.';
 ?>
