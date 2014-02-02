@@ -35,7 +35,6 @@ $lang['You can upload a custom header image or select one from your gallery. On 
 $lang['or choose a picture from the gallery'] = '或从相册中选择一张图片';
 $lang['Crop banner image'] = '裁切banner图片';
 $lang['Default banner'] = '默认banner';
-$lang['Default banner size'] = '默认banner尺寸';
 $lang['Display banner on photo page'] = '在图片页面上显示banner';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = '对于 MontBlancXL 和 BlancMontXL，建议使用的尺寸是 900&×;190。';
 $lang['Gallery title above image'] = '图片上方的相册标题';
@@ -51,4 +50,6 @@ $lang['In order to add a specific banner, go to the admin page of the desired al
 $lang['Non recursive'] = '不用递归';
 $lang['Recursive'] = '递归';
 $lang['Restore default banner'] = '恢复默认的横幅';
+$lang['Respect %s aspect ratio'] = '尊重%s的纵横比';
+$lang['Banner size'] = 'Banner 尺寸';
 ?>
