@@ -37,7 +37,6 @@ $lang['Choose an image from your computer'] = 'Escolliu una imatge del vostre or
 $lang['Choose the part of the image you want to use as your header.'] = 'Escolliu la part de la imatge que voleu utilitzar com a capçalera.';
 $lang['Crop banner image'] = 'Escapça la imatge de bàner';
 $lang['Default banner'] = 'Bàner predeterminat';
-$lang['Default banner size'] = 'Mida del bàner predeterminada';
 $lang['Display banner on photo page'] = 'Mostra el bàner sobre la pàgina de les fotos';
 $lang['Incorrect file type,'] = 'Tipus de fitxer incorrecte,';
 $lang['No banner added yet'] = 'Encara no s\'ha afegit cap bàner';
@@ -51,4 +50,6 @@ $lang['In order to add a specific banner, go to the admin page of the desired al
 $lang['Non recursive'] = 'No recursiu';
 $lang['Recursive'] = 'Recursiu';
 $lang['Restore default banner'] = 'Restaura el bàner per defecte';
+$lang['Respect %s aspect ratio'] = 'Respecta la relació d\'aspecte %s';
+$lang['Banner size'] = 'Mida del banner';
 ?>
