@@ -27,7 +27,6 @@ $lang['Banner'] = 'Banner';
 $lang['Choose an image from your computer'] = 'Kép kiválasztása a számítógépről';
 $lang['Choose the part of the image you want to use as your header.'] = 'Válassza ki a kép azon részét, amelyet a fejlécben kíván használni.';
 $lang['Crop banner image'] = 'Banner kép kivágás';
-$lang['Default banner size'] = 'Alapértelmezett banner méret';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'A MontBlancXL és BlancMontXL esetén ajánlott méret 900&times;190.';
 $lang['Image only'] = 'Csak kép';
 $lang['Incorrect file type,'] = 'Helytelen fájltípus.';
@@ -51,4 +50,6 @@ $lang['Restore default banner'] = 'Alapértelmezett banner';
 $lang['Album specific banners'] = 'Egyedi album bannerek';
 $lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Egyedi banner hozzáadásához menjen az admin oldalon a kívánt albumra';
 $lang['Non recursive'] = 'Nem rekurzív';
+$lang['Banner size'] = 'Banner mérete';
+$lang['Respect %s aspect ratio'] = '%s képarány tartása';
 ?>
