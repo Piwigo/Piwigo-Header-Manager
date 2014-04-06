@@ -48,4 +48,7 @@ $lang['Add a banner'] = 'Adauga un banner';
 $lang['Image only'] = 'Doar poza';
 $lang['Choose the part of the image you want to use as your header.'] = 'Alege o parte din imagine pe care o doresti ca antet ';
 $lang['Choose an image from your computer'] = 'Alege o imagine din calculator';
-?>
+$lang['The numeric identifier can be found on the picture edition page, near the thumbnail.'] = 'Identificatorul numeric poate fi gasit in pagina fotografiei, langa miniatura.';
+$lang['In order to add a specific banner, go to the admin page of the desired album.'] = 'Pentru a adauga un anumit banner, mergi in pagina de adminstrare a respectivului album';
+$lang['Non recursive'] = 'Nu se repeta nelimitat';
+$lang['Recursive'] = 'Se repeta nelimitat';
