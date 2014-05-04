@@ -40,7 +40,6 @@ $lang['Choose an image from your computer'] = 'Välj bild från din dator';
 $lang['Choose the part of the image you want to use as your header.'] = 'Välj den del av bilden som du vill hanvända som sidhuvud.';
 $lang['Crop banner image'] = 'Beskär banner bild';
 $lang['Default banner'] = 'Standard banner';
-$lang['Default banner size'] = 'Standardstorlek på banner';
 $lang['Display banner on photo page'] = 'Visa banner på bild sida';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Rekomenderad storlek För MontBlancXL och BlancMontXL är,  900& X ;190.';
 $lang['Gallery title above image'] = 'Album titel ovanför bilden';
@@ -51,4 +50,4 @@ $lang['No banner added yet'] = 'Ingen banner tillagd ännu';
 $lang['Non recursive'] = 'Icke-rekursiv';
 $lang['Picture id.'] = 'Bild id.';
 $lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'Placera <b>%header_manager%</b> där du vill att bilden visas.';
-?>
+$lang['Respect %s aspect ratio'] = 'Respektera bildförhållandet %s';
