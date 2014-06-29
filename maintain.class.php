@@ -3,8 +3,6 @@ defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
 class header_manager_maintain extends PluginMaintain
 {
-  private $installed = false;
-  
   private $default_conf = array(
       'width' => 1000,
       'height' => 150,
@@ -13,6 +11,16 @@ class header_manager_maintain extends PluginMaintain
       'banner_on_picture' => true,
       'keep_ratio' => true
     );
+    
+  private $table;
+  
+  function __construct($plugin_id)
+  {
+    global $prefixeTable;
+    
+    parent::__construct($plugin_id);
+    $this->table = $prefixeTable . 'category_banner';
+  }
 
   function install($plugin_version, &$errors=array())
   {
@@ -21,12 +29,11 @@ class header_manager_maintain extends PluginMaintain
     // configuration
     if (empty($conf['header_manager']))
     {
-      $conf['header_manager'] = serialize($this->default_conf);
-      conf_update_param('header_manager', $conf['header_manager']);
+      conf_update_param('header_manager', $this->default_conf, true);
     }
     else
     {
-      $new_conf = is_string($conf['header_manager']) ? unserialize($conf['header_manager']) : $conf['header_manager'];
+      $new_conf = safe_unserialize($conf['header_manager']);
       
       if (!isset($new_conf['banner_on_picture']))
       {
@@ -37,8 +44,7 @@ class header_manager_maintain extends PluginMaintain
         $new_conf['keep_ratio'] = true;
       }
       
-      $conf['header_manager'] = serialize($new_conf);
-      conf_update_param('header_manager', $conf['header_manager']);
+      conf_update_param('header_manager', $new_conf, true);
     }
 
     // banners directory
@@ -49,7 +55,7 @@ class header_manager_maintain extends PluginMaintain
 
     // banners table
     $query = '
-CREATE TABLE IF NOT EXISTS `' .$prefixeTable . 'category_banner` (
+CREATE TABLE IF NOT EXISTS `' .$this->table . '` (
   `category_id` smallint(5) unsigned NOT NULL,
   `image` varchar(255) NOT NULL,
   `deep` tinyint(1) DEFAULT 1,
@@ -57,28 +63,17 @@ CREATE TABLE IF NOT EXISTS `' .$prefixeTable . 'category_banner` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
 ;';
     pwg_query($query);
-
-    $this->installed = true;
   }
 
-  function activate($plugin_version, &$errors=array())
+  function update($old_version, $new_version, &$errors=array())
   {
-    if (!$this->installed)
-    {
-      $this->install($plugin_version, $errors);
-    }
-  }
-
-  function deactivate()
-  {
+    $this->install($new_version, $errors);
   }
 
   function uninstall()
   {
-    global $prefixeTable;
-
     conf_delete_param('header_manager');
 
-    pwg_query('DROP TABLE `' .$prefixeTable . 'category_banner`;');
+    pwg_query('DROP TABLE `' .$this->table . '`;');
   }
 }

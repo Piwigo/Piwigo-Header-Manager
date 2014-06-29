@@ -10,15 +10,19 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
-global $prefixeTable;
+global $prefixeTable, $conf;
+
 define('HEADER_MANAGER_PATH',    PHPWG_PLUGINS_PATH . 'header_manager/');
 define('HEADER_MANAGER_ADMIN',   get_root_url() . 'admin.php?page=plugin-header_manager');
 define('HEADER_MANAGER_DIR',     PHPWG_ROOT_PATH . PWG_LOCAL_DIR . 'banners/');
 define('HEADER_MANAGER_TABLE',   $prefixeTable . 'category_banner');
-define('HEADER_MANAGER_VERSION', 'auto');
+
+include_once(HEADER_MANAGER_PATH . 'include/functions.inc.php');
+include_once(HEADER_MANAGER_PATH . 'include/header_manager.inc.php');
 
 
-add_event_handler('init', 'header_manager_init');
+$conf['header_manager'] = safe_unserialize($conf['header_manager']);
+
   
 if (defined('IN_ADMIN'))
 {
@@ -31,23 +35,6 @@ else if (!defined('PWG_HELP'))
   add_event_handler('render_page_banner', 'header_manager_render');
 }
 
-include_once(HEADER_MANAGER_PATH . 'include/functions.inc.php');
-include_once(HEADER_MANAGER_PATH . 'include/header_manager.inc.php');
-
-
-/**
- * initialization
- */
-function header_manager_init()
-{
-  global $conf, $pwg_loaded_plugins, $page;
-  
-  include_once(HEADER_MANAGER_PATH . 'maintain.inc.php');
-  $maintain = new header_manager_maintain('header_manager');
-  $maintain->autoUpdate(HEADER_MANAGER_VERSION, 'install');
-  
-  $conf['header_manager'] = unserialize($conf['header_manager']);
-}
 
 /**
  * Header Manager admin link

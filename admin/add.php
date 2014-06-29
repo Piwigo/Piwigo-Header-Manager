@@ -14,7 +14,7 @@ else if (isset($_POST['submit_crop']))
   include_once(HEADER_MANAGER_PATH . 'include/banner.class.php');
   
   $conf['header_manager']['keep_ratio'] = isset($_POST['keep_ratio']);
-  conf_update_param('header_manager', serialize($conf['header_manager']));
+  conf_update_param('header_manager', $conf['header_manager']);
   
   $banner = get_banner($_POST['picture_file']);
   
@@ -112,7 +112,7 @@ if (defined('IN_CROP'))
   // save default size configuration
   $conf['header_manager']['width'] = intval($_POST['width']);
   $conf['header_manager']['height'] = intval($_POST['height']);
-  conf_update_param('header_manager', serialize($conf['header_manager']));
+  conf_update_param('header_manager', $conf['header_manager']);
 
   $picture['banner_src'] = HEADER_MANAGER_DIR . $picture['filename'];
   

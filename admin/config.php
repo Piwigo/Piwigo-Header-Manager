@@ -5,7 +5,7 @@ defined('HEADER_MANAGER_PATH') or die('Hacking attempt!');
 if (pwg_get_session_var('added_banner')!==null and $conf['header_manager']['image']!='random')
 {
   $conf['header_manager']['image'] = pwg_get_session_var('added_banner');
-  conf_update_param('header_manager', serialize($conf['header_manager']));
+  conf_update_param('header_manager', $conf['header_manager']);
   pwg_unset_session_var('added_banner');
 }
 
@@ -15,8 +15,7 @@ if (isset($_POST['save_config']))
 {
   if ($_POST['display'] == 'with_text')
   {
-    $conf['page_banner'] = $_POST['conf_page_banner'];
-    conf_update_param('page_banner', $conf['page_banner']);
+    conf_update_param('page_banner', $_POST['conf_page_banner'], true);
   }
   
   $conf['header_manager'] = array(
@@ -26,7 +25,7 @@ if (isset($_POST['save_config']))
     'display' => $_POST['display'],
     'banner_on_picture' => isset($_POST['banner_on_picture']),
     );
-  conf_update_param('header_manager', serialize($conf['header_manager']));
+  conf_update_param('header_manager', $conf['header_manager']);
   
   $page['infos'][] = l10n('Information data registered in database');
 }
@@ -43,7 +42,7 @@ if (isset($_GET['delete_banner']))
     if ($conf['header_manager']['image'] == $_GET['delete_banner'])
     {
       $conf['header_manager']['image'] = 'random';
-      conf_update_param('header_manager', serialize($conf['header_manager']));
+      conf_update_param('header_manager', $conf['header_manager']);
     }
     
     $query = '
