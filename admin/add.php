@@ -34,7 +34,6 @@ else if (isset($_POST['submit_crop']))
   $img->destroy();
   
   $_SESSION['page_infos'][] = l10n('Banner added');
-  pwg_set_session_var('added_banner', $_POST['picture_file']);
   
   if (!empty($_GET['redirect']))
   {

@@ -1,14 +1,6 @@
 <?php
 defined('HEADER_MANAGER_PATH') or die('Hacking attempt!');
 
-// change banner to last uploaded
-if (pwg_get_session_var('added_banner')!==null and $conf['header_manager']['image']!='random')
-{
-  $conf['header_manager']['image'] = pwg_get_session_var('added_banner');
-  conf_update_param('header_manager', $conf['header_manager']);
-  pwg_unset_session_var('added_banner');
-}
-
 
 // save config
 if (isset($_POST['save_config']))
