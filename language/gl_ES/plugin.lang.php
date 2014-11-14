@@ -40,7 +40,6 @@ $lang['Non recursive'] = 'Non recursivo';
 $lang['Picture id.'] = 'Identificador da foto';
 $lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'Pon  <b>%header_manager%</b> onde queiras amosar a imaxe.';
 $lang['Default banner'] = 'Cartel predeterminado';
-$lang['Default banner size'] = 'Tamaño do cartel predeterminado';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Para MontBlancXL e BlancMontXL, o tamaño recomendado é de 900&times;190.';
 $lang['Gallery title above image'] = 'Título da galería sobre a imaxe';
 $lang['Image only'] = 'Só imaxe';
@@ -51,4 +50,4 @@ $lang['Banner'] = 'Cartel';
 $lang['Banner added'] = 'Engadiuse o cartel';
 $lang['Banner deleted'] = 'Eliminouse o cartel';
 $lang['Choose an image from your computer'] = 'Escolle unha imaxe para o teu computador';
-?>
+$lang['Banner size'] = 'Tamaño do báner';
