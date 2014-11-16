@@ -10,6 +10,17 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
+if (basename(dirname(__FILE__)) != 'header_manager')
+{
+  add_event_handler('init', 'header_manager_error');
+  function header_manager_error()
+  {
+    global $page;
+    $page['errors'][] = 'Header Manager folder name is incorrect, uninstall the plugin and rename it to "header_manager"';
+  }
+  return;
+}
+
 global $prefixeTable, $conf;
 
 define('HEADER_MANAGER_PATH',    PHPWG_PLUGINS_PATH . 'header_manager/');
