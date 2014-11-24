@@ -51,3 +51,4 @@ $lang['Non recursive'] = 'Icke-rekursiv';
 $lang['Picture id.'] = 'Bild id.';
 $lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'Placera <b>%header_manager%</b> där du vill att bilden visas.';
 $lang['Respect %s aspect ratio'] = 'Respektera bildförhållandet %s';
+$lang['Banner size'] = 'Bannerstorlek';
