@@ -31,7 +31,6 @@ $lang['Select an image'] = 'تحديد صورة';
 $lang['Restore default banner'] = 'استعادة الافتة الافتراضية';
 $lang['Recursive'] = 'تكراري';
 $lang['Random'] = 'عشوائي';
-$lang['Default banner size'] = 'حجم اللافتة الافتراضي';
 $lang['Put <b>%header_manager%</b> where you want to display the image.'] = 'وضع <b>%header_manager%</b> حيث كنت ترغب في عرض الصورة.';
 $lang['Picture id.'] = 'معرف الصورة.';
 $lang['Non recursive'] = 'غير المكررة';
@@ -51,4 +50,5 @@ $lang['Banner added'] = 'اضيفت اللافتة';
 $lang['Banner'] = 'لافتة';
 $lang['Album specific banners'] = 'لافتات الالبوم الخاصة';
 $lang['Add a banner'] = 'إضافة لافتة';
-?>
+$lang['Respect %s aspect ratio'] = 'مراعاة %s نسبة العرض إلى الارتفاع ';
+$lang['Banner size'] = 'حجم الشعار';
