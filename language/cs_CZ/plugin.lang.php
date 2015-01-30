@@ -27,7 +27,6 @@ $lang['Banner'] = 'Banner';
 $lang['Choose an image from your computer'] = 'Vyberte obrázek z vašeho počítače';
 $lang['Choose the part of the image you want to use as your header.'] = 'Vyberte část obrázku, kterou chcete použít jako banner';
 $lang['Crop banner image'] = 'Oříznout obrázek banneru';
-$lang['Default banner size'] = 'Standardní velikost banneru';
 $lang['For MontBlancXL and BlancMontXL, advised size is 900&times;190.'] = 'Pro MontBlancXL a BlancMontXL je doporučená velikost 900&times;190.';
 $lang['Gallery title above image'] = 'Nadpis galerie nad obrázkem';
 $lang['Image only'] = 'Pouze obrázek';
@@ -51,4 +50,5 @@ $lang['Album specific banners'] = 'Záhlaví alb';
 $lang['Non recursive'] = 'Ne-rekurzivně';
 $lang['Recursive'] = 'Rekurzivně';
 $lang['Restore default banner'] = 'Obnovit výchozí záhlaví';
-?>
+$lang['Banner size'] = 'Velikost banneru';
+$lang['Respect %s aspect ratio'] = 'Respektovat %s poměr stran';
