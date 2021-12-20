@@ -6,6 +6,7 @@ Description: Header Manager allows to simply manage gallery banners. You can upl
 Plugin URI: auto
 Author: Mistic
 Author URI: http://www.strangeplanet.fr
+Has Settings: true
 */
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
