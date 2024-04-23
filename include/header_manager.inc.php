@@ -113,5 +113,12 @@ function hm_uppercats_sort($a, $b)
 {
   global $page;
   $ids = explode(',', $page['category']['uppercats']);
-  return array_search($a['category_id'], $ids) < array_search($b['category_id'], $ids);
+  $a_pos = array_search($a['category_id'], $ids);
+  $b_pos = array_search($b['category_id'], $ids);
+
+  if ($a_pos == $b_pos)
+  {
+    return 0;
+  }
+  return ($a_pos < $b_pos ? -1 : 1);
 }
