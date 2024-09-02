@@ -4,7 +4,7 @@
 	<h2>Header Manager</h2>
 </div>
 
-{if $IN_CROP}
+{if isset($IN_CROP)}
 {combine_css path="themes/default/js/plugins/jquery.Jcrop.css"}
 {combine_script id='jquery.jcrop' load='footer' require='jquery' path='themes/default/js/plugins/jquery.Jcrop.min.js'}
 

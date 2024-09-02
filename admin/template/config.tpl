@@ -74,7 +74,7 @@ jQuery(".showImage").tipTip({
     <legend>{'Album specific banners'|translate}</legend>
     <i>{'In order to add a specific banner, go to the admin page of the desired album.'|translate}</i>
     
-  {if $categories}
+  {if isset($categories)}
     <ul id="album_banners">
     {foreach from=$categories item=cat}
       <li>

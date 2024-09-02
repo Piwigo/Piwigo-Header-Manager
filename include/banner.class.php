@@ -8,6 +8,20 @@ include_once(PHPWG_ROOT_PATH . 'admin/include/image.class.php');
  */
 class banner_image extends pwg_image
 {
+  // Starting with PHP 8, a private method can no longer be called by its child class.
+  function get_resize_result($destination_filepath, $width, $height, $time=null)
+  {
+    return array(
+      'source'      => $this->source_filepath,
+      'destination' => $destination_filepath,
+      'width'       => $width,
+      'height'      => $height,
+      'size'        => floor(filesize($destination_filepath) / 1024).' KB',
+      'time'        => $time ? number_format((get_moment() - $time) * 1000, 2, '.', ' ').' ms' : null,
+      'library'     => $this->library,
+    );
+  }
+
   function banner_resize($destination_filepath, $selection)
   {
     global $conf;
